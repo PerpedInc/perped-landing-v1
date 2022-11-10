@@ -1,4 +1,15 @@
-# Perped Landing Page (create-react-app + Chakra UI)
+<p align="center">
+<img align="center" src="perped.png" width="200">
+</p>
+
+# Perped Landing Page
+
+## Introduction
+
+Landing page for Perped - A Decentralized Perpetuals Protocol
+</br>
+
+## Run the app locally
 
 ### `npm start`
 
