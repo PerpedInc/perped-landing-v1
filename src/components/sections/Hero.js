@@ -1,6 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
+import '@fontsource/montserrat';
+
 import {
   Box,
   Button,
@@ -36,20 +38,24 @@ export default function Hero({
         align={["center", "center", "flex-start", "flex-start"]}
       >
         <Heading
+          bgGradient='linear-gradient(315deg, #3C5F9E -0.41%, #4A3660 100.03%)'
+          bgClip='text'
+          fontFamily={'montserrat'}
           as="h1"
           size="xl"
           fontWeight="bold"
-          color="primary.800"
+          //color="primary.800"
           textAlign={["center", "center", "left", "left"]}
         >
           {title}
         </Heading>
         <Heading
+          fontFamily={'montserrat'}
           as="h2"
-          size="md"
+          size="2xl"
           color="primary.800"
           opacity="0.8"
-          fontWeight="normal"
+          fontWeight="bold"
           lineHeight={1.5}
           textAlign={["center", "center", "left", "left"]}
         >
@@ -77,7 +83,7 @@ export default function Hero({
         
         </Text>
       </Stack>
-      <Box w={{ base: "80%", sm: "60%", md: "50%" }} mb={{ base: 12, md: 0 }}>
+      <Box w={{ base: "100%", sm: "100%", md: "60%" }} mb={{ base: 12, md: 0 }}>
         {/* TODO: Make this change every X secs */}
         <Image src={image} size="100%" rounded="1rem" shadow="2xl" />
       </Box>

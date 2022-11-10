@@ -14,10 +14,10 @@ const colors = {
   }
 };
 
-const customTheme = extendTheme({ colors,   styles: {
+const customTheme = extendTheme({ colors, styles: {
   global: (props) => ({
     body: {
-      fontFamily: 'body',
+      fontFamily: 'montserrat',
       // color: mode('black', 'black')(props),
       bg: mode('black', 'black')(props),
       lineHeight: 'base',

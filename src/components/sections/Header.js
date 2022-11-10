@@ -78,10 +78,11 @@ const Header = (props) => {
         >
           <MenuItem to="/signup" isLast>
             <Button
+              bgGradient='linear-gradient(315deg, #3C5F9E -0.41%, #4A3660 100.03%)'
+              bgClip='text'
               size="sm"
               rounded="md"
-              color={["primary.500", "primary.500", "white", "white"]}
-              bg={["white", "white", "primary.500", "primary.500"]}
+              
               _hover={{
                 bg: ["primary.100", "primary.100", "primary.600", "primary.600"]
               }}

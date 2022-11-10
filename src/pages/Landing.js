@@ -7,8 +7,8 @@ export default function Landing() {
   return (
     <LandingLayout>
       <Hero
-        title="A Decentralized Perpetuals Protocol"
-        subtitle="Coming Soon"
+        title="A Decentralised Perpetuals Protocol"
+        subtitle="COMING SOON"
         image= { Logo }
       />
     </LandingLayout>
