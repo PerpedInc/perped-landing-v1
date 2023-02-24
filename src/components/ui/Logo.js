@@ -5,7 +5,7 @@ import perpedLogo from "./perpedLogo.png";
 export default function Logo(props) {
   return (
     <Box {...props}>
-      <Image width="200px" src={perpedLogo} alt="Perped" />
+      <Image width="130px" height="40px" src={perpedLogo} alt="Perped" />
     </Box>
   );
 }
