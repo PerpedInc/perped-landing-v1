@@ -2080,6 +2080,11 @@
   "resolved" "https://registry.npmjs.org/@fontsource/open-sans/-/open-sans-4.5.13.tgz"
   "version" "4.5.13"
 
+"@fontsource/source-code-pro@^4.5.14":
+  "integrity" "sha512-EWE0djE7wFCBmExWa9oT1vIp+qj5MUroVvXWb9G7Ig4t4aXDd9QDidYZzMzNemb8gQxTdOzGmhx6EZnDTFMh5Q=="
+  "resolved" "https://registry.npmjs.org/@fontsource/source-code-pro/-/source-code-pro-4.5.14.tgz"
+  "version" "4.5.14"
+
 "@humanwhocodes/config-array@^0.11.6":
   "integrity" "sha512-kBbPWzN8oVMLb0hOUYXhmxggL/1cJE6ydvjDIGi9EnAGUyA7cLVKQg+d/Dsm+KZwx2czGHrCmMVLiyg8s5JPKw=="
   "resolved" "https://registry.npmjs.org/@humanwhocodes/config-array/-/config-array-0.11.7.tgz"
