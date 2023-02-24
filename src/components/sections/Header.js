@@ -78,13 +78,17 @@ const Header = (props) => {
         >
           <MenuItem to="/signup" isLast>
             <Button
-              bgGradient='linear-gradient(315deg, #3C5F9E -0.41%, #4A3660 100.03%)'
-              bgClip='text'
-              size="sm"
-              rounded="md"
-              
+              bgGradient="linear-gradient(105.62deg, #5E7ECE 21.35%, #AE58BD 61.18%)"
+              border="1px"
+              bgClip="text"
+              borderColor="#5E7ECE"
+              padding="26px 15px 25px 15px"
+              transition="0.4s"
               _hover={{
-                bg: ["primary.100", "primary.100", "primary.600", "primary.600"]
+                bgGradient:
+                  "linear-gradient(105.62deg, #5E7ECE 21.35%, #AE58BD 61.18%)",
+                bgClip: "border-box",
+                color: "black",
               }}
             >
               About Us
