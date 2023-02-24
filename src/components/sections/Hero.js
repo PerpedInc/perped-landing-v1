@@ -56,7 +56,7 @@ export default function Hero({
           opacity="1"
           fontWeight={900}
           lineHeight={1.1}
-          paddingRight="60px"
+          paddingRight="48px"
           textAlign="right"
           letterSpacing="10px"
         >
