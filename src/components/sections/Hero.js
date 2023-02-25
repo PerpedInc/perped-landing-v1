@@ -1,7 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
-import '@fontsource/montserrat';
+import "@fontsource/montserrat/700.css";
+import "@fontsource/source-code-pro";
 
 import {
   Box,
@@ -10,7 +11,7 @@ import {
   Image,
   Heading,
   Stack,
-  Text
+  Text,
 } from "@chakra-ui/react";
 
 export default function Hero({
@@ -38,26 +39,26 @@ export default function Hero({
         align={["center", "center", "flex-start", "flex-start"]}
       >
         <Heading
-          bgGradient='linear-gradient(315deg, #3C5F9E -0.41%, #4A3660 100.03%)'
-          bgClip='text'
-          fontFamily={'montserrat'}
-          as="h1"
-          size="xl"
-          fontWeight="bold"
-          //color="primary.800"
-          textAlign={["center", "center", "left", "left"]}
+          bgGradient="linear-gradient(315deg, #3C5F9E -0.41%, #4A3660 100.03%)"
+          bgClip="text"
+          textAlign="right"
+          fontFamily={"Source Code Pro"}
+          fontSize="30px"
+          paddingRight="60px"
         >
           {title}
         </Heading>
         <Heading
-          fontFamily={'montserrat'}
-          as="h2"
-          size="2xl"
-          color="primary.800"
-          opacity="0.8"
-          fontWeight="bold"
-          lineHeight={1.5}
-          textAlign={["center", "center", "left", "left"]}
+          fontFamily={"montserrat"}
+          as="h1"
+          size="3xl"
+          color="white"
+          opacity="1"
+          fontWeight={900}
+          lineHeight={1.1}
+          paddingRight="48px"
+          textAlign="right"
+          letterSpacing="10px"
         >
           {subtitle}
         </Heading>
@@ -73,15 +74,6 @@ export default function Hero({
             {ctaText}
           </Button>
         </Link>
-        <Text
-          fontSize="xs"
-          mt={2}
-          textAlign="center"
-          color="primary.800"
-          opacity="0.6"
-        >
-        
-        </Text>
       </Stack>
       <Box w={{ base: "100%", sm: "100%", md: "60%" }} mb={{ base: 12, md: 0 }}>
         {/* TODO: Make this change every X secs */}

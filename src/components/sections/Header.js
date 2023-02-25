@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { Box, Flex, Text, Button } from "@chakra-ui/react";
 import Logo from "../ui/Logo";
+import "@fontsource/source-code-pro";
 
 const MenuItem = ({ children, isLast, to = "/", ...rest }) => {
   return (
@@ -49,7 +50,7 @@ const Header = (props) => {
       justify="space-between"
       wrap="wrap"
       w="100%"
-      mb={8}
+      mb={5}
       p={8}
       bg={["primary.500", "primary.500", "transparent", "transparent"]}
       color={["white", "white", "primary.700", "primary.700"]}
@@ -57,7 +58,7 @@ const Header = (props) => {
     >
       <Flex align="center">
         <Logo
-          w="100px"
+          w="130px"
           color={["white", "white", "primary.500", "primary.500"]}
         />
       </Flex>
@@ -78,16 +79,21 @@ const Header = (props) => {
         >
           <MenuItem to="/signup" isLast>
             <Button
-              bgGradient='linear-gradient(315deg, #3C5F9E -0.41%, #4A3660 100.03%)'
-              bgClip='text'
+              bgGradient="linear-gradient(105.62deg, #5E7ECE 21.35%, #AE58BD 61.18%)"
+              bgClip="text"
+              fontFamily="Source Code Pro"
               size="sm"
-              rounded="md"
-              
+              border="1px solid #5E7ECE"
+              padding="25px 20px 24px 20px"
+              transition="0.4s"
               _hover={{
-                bg: ["primary.100", "primary.100", "primary.600", "primary.600"]
+                bgGradient:
+                  "linear-gradient(105.62deg, #5E7ECE 21.35%, #AE58BD 61.18%)",
+                bgClip: "border-box",
+                color: "black",
               }}
             >
-              About Us
+              ABOUT US
             </Button>
           </MenuItem>
         </Flex>
