@@ -1,5 +1,5 @@
 import { extendTheme } from "@chakra-ui/react";
-import { mode } from '@chakra-ui/theme-tools'
+import { mode } from "@chakra-ui/theme-tools";
 const colors = {
   primary: {
     100: "#C1C1C1",
@@ -10,19 +10,22 @@ const colors = {
     600: "#C1C1C1",
     700: "#C1C1C1",
     800: "#C1C1C1",
-    900: "#C1C1C1"
-  }
+    900: "#C1C1C1",
+  },
 };
 
-const customTheme = extendTheme({ colors, styles: {
-  global: (props) => ({
-    body: {
-      fontFamily: 'montserrat',
-      // color: mode('black', 'black')(props),
-      bg: mode('black', 'black')(props),
-      lineHeight: 'base',
-    },
-  }),
-},});
+const customTheme = extendTheme({
+  colors,
+  styles: {
+    global: (props) => ({
+      body: {
+        fontFamily: "montserrat",
+        color: mode("black", "black")(props),
+        bg: mode("black", "black")(props),
+        lineHeight: "base",
+      },
+    }),
+  },
+});
 
 export default customTheme;

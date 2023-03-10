@@ -9,11 +9,11 @@ export default function App() {
   return (
     <Router>
       <ChakraProvider theme={customTheme}>
-      <Switch>
-        <Route path="/">
-          <Landing />
-        </Route>
-      </Switch>
+        <Switch>
+          <Route path="/">
+            <Landing />
+          </Route>
+        </Switch>
       </ChakraProvider>
     </Router>
   );
