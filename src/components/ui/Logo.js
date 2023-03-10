@@ -1,5 +1,5 @@
 import React from "react";
-import { Box, Image, Text } from "@chakra-ui/react";
+import { Box, Image } from "@chakra-ui/react";
 import perpedLogo from "./perpedLogo.png";
 
 export default function Logo(props) {
