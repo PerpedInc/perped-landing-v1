@@ -1,18 +1,15 @@
-import React from "react"
-import { Flex } from "@chakra-ui/react"
-import Header from "../sections/Header"
+import { Flex } from "@chakra-ui/react";
+import Header from "../sections/Landing_Header";
+import Hero from "../sections/Landing_Hero";
+import "./fonts.css";
 
-export default function LandingLayout(props) {
+export default function LandingLayout() {
   return (
-    <Flex
-      direction="column"
-      align="center"
-      maxW={{ xl: "1200px" }}
-      m="0 auto"
-      {...props}
-    >
-      <Header />
-      {props.children}
-    </Flex>
-  )
+    <>
+      <Flex direction="column" align="center" m="0 auto" maxW="1500px">
+        <Header />
+        <Hero />
+      </Flex>
+    </>
+  );
 }
