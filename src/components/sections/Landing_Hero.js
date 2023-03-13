@@ -7,9 +7,8 @@ export default function Hero() {
       direction="column"
       align="left"
       w="100%"
-      p="150px 0 0 50px"
-      minH="70vh"
-      justify="center"
+      position="relative"
+      p="170px 0 0 50px"
       color="white"
     >
       <Heading
@@ -50,7 +49,7 @@ export default function Hero() {
         display="inline"
         zIndex="-1"
         position="absolute"
-        top="110"
+        top="0"
         left="850"
       />
     </Flex>

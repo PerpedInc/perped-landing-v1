@@ -6,7 +6,7 @@ import "./fonts.css";
 export default function LandingLayout() {
   return (
     <>
-      <Flex direction="column" align="center" m="0 auto" maxW="1400px">
+      <Flex direction="column" align="center" m="0 auto" maxW="1500px">
         <Header />
         <Hero />
       </Flex>

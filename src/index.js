@@ -14,11 +14,11 @@ root.render(
         styles: {
           global: {
             body: {
-              height: "100vh",
-              maxHeight: "max-content",
+              minHeight: "100vh",
               backgroundImage: "linear-gradient(105.62deg, #2F213D, #39416D)",
-              // backgroundRepeat: "no-repeat",
+              backgroundRepeat: "no-repeat",
               backgroundSize: "cover",
+              backgroundRepeat: "repeat",
             },
           },
         },

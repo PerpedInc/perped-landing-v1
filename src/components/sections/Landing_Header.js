@@ -31,6 +31,7 @@ export default function Header() {
       >
         <Logo />
         <Flex
+          wrap="wrap"
           align="center"
           direction="row"
           gap="48px"
