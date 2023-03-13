@@ -6,13 +6,7 @@ import "./fonts.css";
 export default function LandingLayout() {
   return (
     <>
-      <Flex
-        direction="column"
-        w="100%"
-        align="center"
-        maxW={{ xl: "1200px" }}
-        m="0 auto"
-      >
+      <Flex direction="column" align="center" m="0 auto" maxW="1400px">
         <Header />
         <Hero />
       </Flex>

@@ -21,8 +21,10 @@ export default function Header() {
     <>
       <Flex
         as="nav"
+        align="center"
         // align="flex-start"
         justify="space-between"
+        wrap="wrap"
         w="100%"
         p="30px 50px"
         color="white"

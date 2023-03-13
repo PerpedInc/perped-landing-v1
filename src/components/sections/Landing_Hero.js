@@ -8,6 +8,7 @@ export default function Hero() {
       align="left"
       w="100%"
       p="150px 0 0 50px"
+      minH="70vh"
       justify="center"
       color="white"
     >
