@@ -1,13 +1,31 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import React from "react";
+import ReactDOM from "react-dom/client";
+import App from "./App";
+import reportWebVitals from "./reportWebVitals";
+import "./index.css";
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
+import { ChakraProvider } from "@chakra-ui/react";
+
+const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <App />
+    <ChakraProvider
+      theme={{
+        styles: {
+          global: {
+            body: {
+              minHeight: "100vh",
+              backgroundImage: "linear-gradient(105.62deg, #2F213D, #39416D)",
+              backgroundRepeat: "no-repeat",
+              backgroundSize: "cover",
+              backgroundRepeat: "repeat",
+            },
+          },
+        },
+      }}
+    >
+      <App />
+    </ChakraProvider>
   </React.StrictMode>
 );
 
