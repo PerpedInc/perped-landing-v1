@@ -1,7 +1,7 @@
 import { Image, Heading, Text, Flex, Button } from "@chakra-ui/react";
-import bgLogo from "../ui/bgLogo.png";
+import bgLogo from "../../ui/bgLogo.png";
 
-export default function Hero() {
+export default function LandingHero() {
   return (
     <Flex
       direction="column"
@@ -15,6 +15,8 @@ export default function Hero() {
         fontSize={90}
         letterSpacing="-1px"
         fontFamily="Source Code Pro Thick"
+        bgGradient="linear-gradient(105.62deg, #5E7ECE 21.35%, #AE58BD 61.18%)"
+        bgClip="text"
       >
         Trade in Perpetuity
       </Heading>
