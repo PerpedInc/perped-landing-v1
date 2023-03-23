@@ -16,7 +16,7 @@ export default function LandingFooter() {
         align="center"
         justify="center"
         w="100%"
-        p="0px 60px"
+        p="20px 60px"
       >
         <Flex direction="column">
           <Image width={200} height={60} mb={30} src={PERPED} alt="Perped" />
