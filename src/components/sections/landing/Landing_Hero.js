@@ -1,5 +1,5 @@
-import { Image, Heading, Text, Flex, Button } from "@chakra-ui/react";
-import bgLogo from "../../ui/bgLogo.png";
+import { Image, Box, Heading, Text, Flex, Button } from "@chakra-ui/react";
+import wave from "../../../images/wave.gif";
 
 export default function LandingHero() {
   return (
@@ -7,24 +7,32 @@ export default function LandingHero() {
       direction="column"
       align="left"
       w="100%"
+      h={800}
       position="relative"
-      p="170px 0 0 50px"
+      pt={160}
       color="white"
     >
       <Heading
+        pl={50}
         fontSize={90}
-        letterSpacing="-1px"
+        letterSpacing={-1}
         fontFamily="Source Code Pro Thick"
         bgGradient="linear-gradient(105.62deg, #5E7ECE 21.35%, #AE58BD 61.18%)"
         bgClip="text"
       >
         Trade in Perpetuity
       </Heading>
-      <Text color="white" fontFamily="Source Code Pro Thick" ml="10px">
+      <Text
+        pl={50}
+        color="white"
+        fontSize={21}
+        fontFamily="Source Code Pro Thick"
+        ml="10px"
+      >
         The First True On-Chain Perpetuals Derivatives Platform For Real World
         Assets
       </Text>
-      <Flex direction="row" gap="30px" m="30px 10px 10px 10px">
+      <Flex direction="row" gap="30px" m="30px 10px 10px 10px" pl={50}>
         <Button
           bgGradient="linear-gradient(105.62deg, #5E7ECE 21.35%, #AE58BD 61.18%)"
           bgClip="border-box"
@@ -39,21 +47,26 @@ export default function LandingHero() {
           }}
         >
           Trade Now
-        </Button>{" "}
-        <Button fontFamily="Source Code Pro Slim" fontSize="14px">
+        </Button>
+        <Button
+          fontFamily="Source Code Pro Slim"
+          fontSize="14px"
+          _hover={{
+            color: "#AE58BD",
+          }}
+        >
           Learn More {">"}
         </Button>
       </Flex>
-      <Image
-        src={bgLogo}
-        h="650px"
-        w="550px"
-        display="inline"
-        zIndex="-1"
-        position="absolute"
-        top="0"
-        left="850"
-      />
+      <Box position="absolute" pt={90} zIndex={-1}>
+        <Box
+          position="absolute"
+          width="100%"
+          height="100%"
+          background="linear-gradient(to bottom, #090909 7%, rgba(9,9,9,0.7) 34%, #090909 50%)"
+        />
+        <Image src={wave} />
+      </Box>
     </Flex>
   );
 }

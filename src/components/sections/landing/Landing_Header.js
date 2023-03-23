@@ -1,10 +1,8 @@
-import { Flex, Link, Button, Text, Image, Spacer, Box } from "@chakra-ui/react";
-import { useState } from "react";
+import { Flex, Image, Spacer, Box } from "@chakra-ui/react";
 
 import LandingNav from "./Landing_Nav";
 
-import arrow from "../../ui/arrow.png";
-import perpedLogo from "../../ui/perpedLogo.png";
+import PERPED from "../../../images/PERPED.png";
 
 export default function LandingHeader() {
   return (
@@ -19,13 +17,7 @@ export default function LandingHeader() {
         p="30px 50px"
       >
         <Box w="fit-content">
-          <Image
-            width={130}
-            height={40}
-            mb={30}
-            src={perpedLogo}
-            alt="Perped"
-          />
+          <Image width={200} height={60} mb={30} src={PERPED} alt="Perped" />
         </Box>
         <Spacer />
         <LandingNav />

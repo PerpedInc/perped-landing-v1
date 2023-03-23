@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
-import { Flex, Link, Button, Text, Image, Spacer, Box } from "@chakra-ui/react";
+import { Flex, Link, Button, Text, Image, Box } from "@chakra-ui/react";
 import { useState } from "react";
-import arrow from "../../ui/arrow.png";
+import arrow from "../../../images/arrow.png";
 
 const MenuElement = ({
   children,
@@ -20,7 +20,7 @@ const MenuElement = ({
     LinksArray.push(
       <>
         <Box display="block" fontSize={17}>
-          <Link key={index} href={`/${link}`}>
+          <Link key={index} _hover={{ color: "#AE58BD" }} href={`/${link}`}>
             {name}
           </Link>
         </Box>
@@ -38,7 +38,7 @@ const MenuElement = ({
         onClick={toggleFunction}
         cursor="pointer"
         fontFamily="Source Code Pro Slim"
-        fontSize={18}
+        fontSize={19}
       >
         {children}
         <Image src={arrow} display="inline" h={8} pb={2} />
@@ -51,7 +51,7 @@ const MenuElement = ({
           fontSize={20}
           zIndex={1}
           top={-5}
-          pt={40}
+          pt={45}
           position="absolute"
           onMouseLeave={toggleFunction}
         >
@@ -110,8 +110,8 @@ export default function LandingNav() {
         <MenuElement
           toggleFunction={toggleAbout}
           toggleState={showAbout}
-          subLinksLocation={["#", "#", "#"]}
-          subLinksName={["USA", "India", "Nepal"]}
+          subLinksLocation={["#", "#", "#", "#"]}
+          subLinksName={["Blogs", "FAQs", "DOCs", "Academy"]}
         >
           About{" "}
         </MenuElement>
@@ -119,8 +119,8 @@ export default function LandingNav() {
         <MenuElement
           toggleFunction={toggleCompany}
           toggleState={showCompany}
-          subLinksLocation={["#", "#", "#"]}
-          subLinksName={["USA", "India", "Nepal"]}
+          subLinksLocation={["#", "#"]}
+          subLinksName={["Goal", "Brand"]}
         >
           Company{" "}
         </MenuElement>
@@ -129,7 +129,7 @@ export default function LandingNav() {
           toggleFunction={toggleGovernence}
           toggleState={showGovernence}
           subLinksLocation={["#", "#", "#"]}
-          subLinksName={["USA", "India", "Nepal"]}
+          subLinksName={["Dashboard", "Forums", "Proposes"]}
         >
           Governence{" "}
         </MenuElement>
@@ -137,21 +137,26 @@ export default function LandingNav() {
         <MenuElement
           toggleFunction={toggleCommunity}
           toggleState={showCommunity}
-          subLinksLocation={["#", "#", "#"]}
-          subLinksName={["USA", "India", "Nepal"]}
+          subLinksLocation={["#", "#", "#", "#", "#"]}
+          subLinksName={[
+            "Discord",
+            "Twitter",
+            "Youtube",
+            "LinkedIn",
+            "Telegram",
+          ]}
         >
           Community{" "}
         </MenuElement>
 
         <Button
-          bgGradient="linear-gradient(110deg, rgba(94,126,206,1) 20%, rgba(174,88,189,1) 100%)"
+          bgGradient="linear-gradient(110deg, #5E7ECE 21.35%, #AE58BD 61.18%)"
           bgClip="border-box"
           fontFamily="Source Code Pro Thick"
-          fontSize={16}
-          letterSpacing={1}
-          borderRadius={10}
+          fontSize={18}
+          borderRadius={15}
           ml={5}
-          p="12px 16px 13px 16px"
+          p="15px 50px"
           transition="0.5s"
           _hover={{
             color: "black",
