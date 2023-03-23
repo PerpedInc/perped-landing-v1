@@ -1,71 +1,79 @@
+import { motion } from "framer-motion";
 import { Flex, Link, Button, Text, Image, Spacer, Box } from "@chakra-ui/react";
 import { useState } from "react";
 import arrow from "../../ui/arrow.png";
 
-// const MenuElement = ({ children, toggleFunction, toggleState }) => {
-//   return (
-//     <Box position="relative">
-//       <Text
-//         onClick={toggleFunction}
-//         cursor="pointer"
-//         fontFamily="Source Code Pro Slim"
-//         fontSize={18}
-//       >
-//         {children} <Image src={arrow} display="inline" h={7} pb={2} />
-//       </Text>
-//       <Box
-//         w={120}
-//         display={toggleState ? "block" : "none"}
-//         fontFamily="Source Code Pro Slim"
-//         fontSize={16}
-//         zIndex={1}
-//         position="absolute"
-//         top={35}
-//         left={-25}
-//       >
-//         <Box
-//           onMouseLeave={toggleFunction}
-//           bgGradient="linear-gradient(110deg, rgba(94,126,206,1) 20%, rgba(174,88,189,1) 100%)"
-//           borderRadius={10}
-//           p={4}
-//         >
-//           <Flex
-//             bgColor="#090909"
-//             direction="column"
-//             gap={10}
-//             p={10}
-//             borderRadius={8}
-//           >
-//             <Box display="block">
-//               <Link href="#">Blog</Link>
-//             </Box>
-//             <Box display="block">
-//               <Link href="#">FAQs</Link>
-//             </Box>
-//             <Box display="block">
-//               <Link href="#">DOCs</Link>
-//             </Box>
-//             <Box display="block">
-//               <Link href="#">Academy</Link>
-//             </Box>
-//           </Flex>
-//         </Box>
-//       </Box>
-//     </Box>
-//   );
-// };
+const MenuElement = ({
+  children,
+  toggleFunction,
+  toggleState,
+  subLinksLocation,
+  subLinksName,
+}) => {
+  var LinksArray = [];
 
-const MenuItem = ({ children, to }) => {
+  var limit = subLinksLocation.length;
+  for (var index = 0; index < limit; index++) {
+    const link = subLinksLocation[index];
+    const name = subLinksName[index];
+
+    LinksArray.push(
+      <>
+        <Box display="block" fontSize={17}>
+          <Link key={index} href={`/${link}`}>
+            {name}
+          </Link>
+        </Box>
+      </>
+    );
+  }
+
+  const boxAnimation = {
+    opacity: toggleState ? 1 : 0,
+    transition: { duration: 0.1 },
+  };
   return (
-    <Text
-      display="block"
-      cursor="pointer"
-      fontFamily="Source Code Pro Slim"
-      fontSize="17px"
-    >
-      <Link to={to}>{children}</Link>
-      <Image src={arrow} display="inline" h={7} pb={2} />
-    </Text>
+    <Box position="relative">
+      <Text
+        onClick={toggleFunction}
+        cursor="pointer"
+        fontFamily="Source Code Pro Slim"
+        fontSize={18}
+      >
+        {children}
+        <Image src={arrow} display="inline" h={8} pb={2} />
+      </Text>
+      <motion.div animate={boxAnimation}>
+        <Box
+          w={130}
+          display={toggleState ? "block" : "none"}
+          fontFamily="Source Code Pro Slim"
+          fontSize={20}
+          zIndex={1}
+          top={-5}
+          pt={40}
+          position="absolute"
+          onMouseLeave={toggleFunction}
+        >
+          <Box
+            bgGradient="linear-gradient(to bottom, rgba(94,126,206,1) 20%, rgba(174,88,189,1) 100%)"
+            borderRadius={10}
+            p={1}
+          >
+            <Flex
+              bgColor="#090909"
+              direction="column"
+              gap={10}
+              p={15}
+              borderRadius={10}
+              color="gray"
+            >
+              {LinksArray}
+            </Flex>
+          </Box>
+        </Box>
+      </motion.div>
+    </Box>
   );
 };
 
@@ -99,58 +107,42 @@ export default function LandingNav() {
         direction="row"
         gap={40}
       >
-        <Box position="relative">
-          <Text
-            onClick={toggleAbout}
-            cursor="pointer"
-            fontFamily="Source Code Pro Slim"
-            fontSize={18}
-          >
-            About <Image src={arrow} display="inline" h={7} pb={2} />
-          </Text>
-          <Box
-            w={120}
-            display={showAbout ? "block" : "none"}
-            fontFamily="Source Code Pro Slim"
-            fontSize={16}
-            zIndex={1}
-            position="absolute"
-            top={35}
-            left={-25}
-          >
-            <Box
-              onMouseLeave={toggleAbout}
-              bgGradient="linear-gradient(110deg, rgba(94,126,206,1) 20%, rgba(174,88,189,1) 100%)"
-              borderRadius={10}
-              p={4}
-            >
-              <Flex
-                bgColor="#090909"
-                direction="column"
-                gap={10}
-                p={10}
-                borderRadius={8}
-              >
-                <Box display="block">
-                  <Link href="#">Blog</Link>
-                </Box>
-                <Box display="block">
-                  <Link href="#">FAQs</Link>
-                </Box>
-                <Box display="block">
-                  <Link href="#">DOCs</Link>
-                </Box>
-                <Box display="block">
-                  <Link href="#">Academy</Link>
-                </Box>
-              </Flex>
-            </Box>
-          </Box>
-        </Box>
+        <MenuElement
+          toggleFunction={toggleAbout}
+          toggleState={showAbout}
+          subLinksLocation={["#", "#", "#"]}
+          subLinksName={["USA", "India", "Nepal"]}
+        >
+          About{" "}
+        </MenuElement>
 
-        <MenuItem to="/governence">Governence </MenuItem>
-        <MenuItem to="/company">Company </MenuItem>
-        <MenuItem to="/community">Community </MenuItem>
+        <MenuElement
+          toggleFunction={toggleCompany}
+          toggleState={showCompany}
+          subLinksLocation={["#", "#", "#"]}
+          subLinksName={["USA", "India", "Nepal"]}
+        >
+          Company{" "}
+        </MenuElement>
+
+        <MenuElement
+          toggleFunction={toggleGovernence}
+          toggleState={showGovernence}
+          subLinksLocation={["#", "#", "#"]}
+          subLinksName={["USA", "India", "Nepal"]}
+        >
+          Governence{" "}
+        </MenuElement>
+
+        <MenuElement
+          toggleFunction={toggleCommunity}
+          toggleState={showCommunity}
+          subLinksLocation={["#", "#", "#"]}
+          subLinksName={["USA", "India", "Nepal"]}
+        >
+          Community{" "}
+        </MenuElement>
+
         <Button
           bgGradient="linear-gradient(110deg, rgba(94,126,206,1) 20%, rgba(174,88,189,1) 100%)"
           bgClip="border-box"
@@ -158,6 +150,7 @@ export default function LandingNav() {
           fontSize={16}
           letterSpacing={1}
           borderRadius={10}
+          ml={5}
           p="12px 16px 13px 16px"
           transition="0.5s"
           _hover={{
