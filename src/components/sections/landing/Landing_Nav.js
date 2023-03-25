@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
-import { Flex, Link, Button, Text, Image, Box } from "@chakra-ui/react";
+import { FaChevronDown } from "react-icons/fa";
+import { Flex, Link, Button, Text, Box } from "@chakra-ui/react";
 import { useState } from "react";
-import arrow from "../../../images/arrow.png";
 
 const MenuElement = ({
   children,
@@ -34,15 +34,18 @@ const MenuElement = ({
   };
   return (
     <Box position="relative">
-      <Text
-        onClick={toggleFunction}
-        cursor="pointer"
-        fontFamily="Source Code Pro Slim"
-        fontSize={19}
-      >
-        {children}
-        <Image src={arrow} display="inline" h={8} pb={2} />
-      </Text>
+      <Flex direction="row" gap={5} justify="center" align="center">
+        <Text
+          onClick={toggleFunction}
+          cursor="pointer"
+          fontFamily="Source Code Pro Slim"
+          fontSize={19}
+        >
+          {children}
+        </Text>
+        <FaChevronDown size={8} />
+      </Flex>
+
       <motion.div animate={boxAnimation}>
         <Box
           w={130}

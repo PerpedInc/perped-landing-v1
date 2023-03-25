@@ -1,11 +1,21 @@
-import { Flex, Link, Heading, Text, Spacer, Image } from "@chakra-ui/react";
+import {
+  Flex,
+  Link,
+  Icon,
+  Heading,
+  Text,
+  Spacer,
+  Image,
+} from "@chakra-ui/react";
+import {
+  FaDiscord,
+  FaTwitter,
+  FaYoutube,
+  FaTelegram,
+  FaLinkedin,
+} from "react-icons/fa";
 
 import PERPED from "../../../images/PERPED.png";
-import linkedin from "../../../images/linkedin.png";
-import twitter from "../../../images/twitter.png";
-import discord from "../../../images/discord.png";
-import telegram from "../../../images/telegram.png";
-import youtube from "../../../images/youtube.png";
 
 export default function LandingFooter() {
   return (
@@ -25,11 +35,21 @@ export default function LandingFooter() {
             eiusmod tempor incididunt ut labore et dolore magna aliqua.
           </Text>
           <Flex direction="row" gap={25}>
-            <Image src={discord} />
-            <Image src={twitter} />
-            <Image src={youtube} />
-            <Image src={linkedin} />
-            <Image src={telegram} />
+            <Link href="#">
+              <Icon as={FaDiscord} boxSize={35} color="#9d60c1" />
+            </Link>
+            <Link href="#">
+              <Icon as={FaTwitter} boxSize={35} color="#846cc6" />
+            </Link>
+            <Link href="#">
+              <Icon as={FaYoutube} boxSize={35} color="#7b70c8" />
+            </Link>
+            <Link href="#">
+              <Icon as={FaLinkedin} boxSize={35} color="#6d76cb" />
+            </Link>
+            <Link href="#">
+              <Icon as={FaTelegram} boxSize={35} color="#5e7ece" />
+            </Link>
           </Flex>
         </Flex>
         <Spacer />

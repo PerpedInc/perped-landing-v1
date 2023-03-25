@@ -1,7 +1,26 @@
 import { Image, Box, Heading, Text, Flex, Button } from "@chakra-ui/react";
 import wave from "../../../images/wave.gif";
 
+import { useEffect, useState } from "react";
+
 export default function LandingHero() {
+  // const fetch = require("node-fetch");
+  // const gifURL =
+  //   "https://elementalblockchain.infura-ipfs.io/ipfs/QmdGwqdicdMhpr3zD8YCHLmHHncj3tzC33UJnD9iDadKbr";  // const [imageFetched, setImageFetched] = useState(null);
+
+  // useEffect(() => {
+  //   async function execute() {
+  //     try {
+  //       await fetch(gifURL).then(() => {
+  //         setImageFetched(true);
+  //       });
+  //     } catch (error) {
+  //       console.log("Pictures taking some time to load...");
+  //     }
+  //   }
+  //   execute();
+  // }, []);
+
   return (
     <Flex
       direction="column"
