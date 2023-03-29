@@ -15,10 +15,8 @@ root.render(
           global: {
             body: {
               minHeight: "100vh",
-              backgroundImage: "linear-gradient(105.62deg, #2F213D, #39416D)",
-              backgroundRepeat: "no-repeat",
-              backgroundSize: "cover",
-              backgroundRepeat: "repeat",
+              maxHeight: "fit-content",
+              backgroundColor: "#090909",
             },
           },
         },
