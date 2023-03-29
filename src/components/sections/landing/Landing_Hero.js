@@ -1,7 +1,5 @@
 import { Image, Box, Heading, Text, Flex, Button } from "@chakra-ui/react";
-import wave from "../../../images/wave.gif";
-
-import { useEffect, useState } from "react";
+import bgWave from "../../../images/bgWave.gif";
 
 export default function LandingHero() {
   // const fetch = require("node-fetch");
@@ -77,14 +75,14 @@ export default function LandingHero() {
           Learn More {">"}
         </Button>
       </Flex>
-      <Box position="absolute" pt={90} zIndex={-1}>
+      <Box position="absolute" pt={90} zIndex={-1} w="100%">
         <Box
           position="absolute"
-          width="100%"
+          w="100%"
           height="100%"
-          background="linear-gradient(to bottom, #090909 7%, rgba(9,9,9,0.7) 34%, #090909 50%)"
+          background="linear-gradient(to bottom, #090909 0%, rgba(9,9,9,0.7) 25%, #090909 50%)"
         />
-        <Image src={wave} />
+        <Image src={bgWave} w="100%" />
       </Box>
     </Flex>
   );
