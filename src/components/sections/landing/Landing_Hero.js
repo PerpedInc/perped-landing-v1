@@ -14,34 +14,34 @@ export default function LandingHero() {
 
   return (
     <Flex
+      color="white"
       direction="column"
       align="left"
+      position="relative"
+      zIndex={0}
       w="100%"
       h={isLargerThanMd ? 700 : "fit-content"}
-      position="relative"
-      pt={isLargerThanMd ? 160 : 100}
-      color="white"
-      zIndex={0}
+      pt={isLargerThanMd ? 160 : 120}
     >
       <Heading
-        w={isLargerThanMd ? "80vw" : "90vw"}
-        pl={isLargerThanMd ? "60px" : 7}
-        fontSize={isLargerThanMd ? 90 : 50}
         letterSpacing={-1}
         fontFamily="Source Code Pro Thick"
         bgGradient="linear-gradient(105.62deg, #5E7ECE 21.35%, #AE58BD 61.18%)"
         bgClip="text"
+        fontSize={isLargerThanMd ? 90 : 50}
+        w={isLargerThanMd ? "80vw" : "90vw"}
+        pl={isLargerThanMd ? "60px" : "30px"}
         mb={isLargerThanMd ? 0 : 4}
       >
         Trade in Perpetuity
       </Heading>
       <Text
+        fontFamily="Source Code Pro Thick"
+        color="white"
+        ml="10px"
         w={isLargerThanMd ? "80vw" : "90vw"}
         pl={isLargerThanMd ? "60px" : 6}
-        color="white"
         fontSize={isLargerThanMd ? 21 : 12}
-        fontFamily="Source Code Pro Thick"
-        ml="10px"
       >
         The First True On-Chain Perpetuals Derivatives Platform For Real World
         Assets
@@ -85,12 +85,17 @@ export default function LandingHero() {
           Learn More {">"}
         </Button>
       </Flex>
-      <Box position="absolute" pt={150} zIndex={-1} w="100%">
+      <Box
+        position="absolute"
+        pt={isLargerThanMd ? 150 : 250}
+        zIndex={-1}
+        w="100%"
+      >
         <Box
           position="absolute"
           w="100%"
-          height="100%"
-          background="linear-gradient(to bottom, #090909 0%, rgba(9,9,9,0.7) 25%, #090909 50%)"
+          height={isLargerThanMd ? "100%" : "70%"}
+          background="linear-gradient(to bottom, #090909 0%, rgba(9,9,9,0.7) 25%, #090909 50% )"
         />
         <Image src={bgWave} w="100%" />
       </Box>

@@ -13,12 +13,12 @@ export default function LandingHeader() {
         direction="row"
         color="white"
         w="100%"
-        p={isLargerThanMd ? "30px 60px" : "60px 30px"}
+        p={isLargerThanMd ? "30px 60px" : "40px 30px"}
       >
         <Box w="fit-content">
           <Image
-            width={isLargerThanMd ? 187 : 160}
-            height={isLargerThanMd ? 57 : 50}
+            width={isLargerThanMd ? 185 : 100}
+            height={isLargerThanMd ? 55 : 30}
             src={PERPED}
             alt="Perped"
           />
