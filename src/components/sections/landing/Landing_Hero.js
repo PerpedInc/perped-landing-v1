@@ -1,73 +1,83 @@
-import { Image, Box, Heading, Text, Flex, Button } from "@chakra-ui/react";
+import {
+  Image,
+  Box,
+  Heading,
+  Text,
+  Flex,
+  Button,
+  useMediaQuery,
+} from "@chakra-ui/react";
 import bgWave from "../../../images/bgWave.gif";
 
 export default function LandingHero() {
-  // const fetch = require("node-fetch");
-  // const gifURL =
-  //   "https://elementalblockchain.infura-ipfs.io/ipfs/QmdGwqdicdMhpr3zD8YCHLmHHncj3tzC33UJnD9iDadKbr";  // const [imageFetched, setImageFetched] = useState(null);
-
-  // useEffect(() => {
-  //   async function execute() {
-  //     try {
-  //       await fetch(gifURL).then(() => {
-  //         setImageFetched(true);
-  //       });
-  //     } catch (error) {
-  //       console.log("Pictures taking some time to load...");
-  //     }
-  //   }
-  //   execute();
-  // }, []);
+  const [isLargerThanMd] = useMediaQuery("(min-width: 1080px)");
 
   return (
     <Flex
       direction="column"
       align="left"
       w="100%"
-      h={800}
+      h={isLargerThanMd ? 700 : "fit-content"}
       position="relative"
-      pt={160}
+      pt={isLargerThanMd ? 160 : 100}
       color="white"
+      zIndex={0}
     >
       <Heading
-        pl={50}
-        fontSize={90}
+        w={isLargerThanMd ? "80vw" : "90vw"}
+        pl={isLargerThanMd ? "60px" : 7}
+        fontSize={isLargerThanMd ? 90 : 50}
         letterSpacing={-1}
         fontFamily="Source Code Pro Thick"
         bgGradient="linear-gradient(105.62deg, #5E7ECE 21.35%, #AE58BD 61.18%)"
         bgClip="text"
+        mb={isLargerThanMd ? 0 : 4}
       >
         Trade in Perpetuity
       </Heading>
       <Text
-        pl={50}
+        w={isLargerThanMd ? "80vw" : "90vw"}
+        pl={isLargerThanMd ? "60px" : 6}
         color="white"
-        fontSize={21}
+        fontSize={isLargerThanMd ? 21 : 12}
         fontFamily="Source Code Pro Thick"
         ml="10px"
       >
         The First True On-Chain Perpetuals Derivatives Platform For Real World
         Assets
       </Text>
-      <Flex direction="row" gap="30px" m="30px 10px 10px 10px" pl={50}>
+      <Flex
+        direction="row"
+        gap={3}
+        m="30px 10px 10px 10px"
+        pl={isLargerThanMd ? "60px" : 6}
+      >
         <Button
           bgGradient="linear-gradient(105.62deg, #5E7ECE 21.35%, #AE58BD 61.18%)"
           bgClip="border-box"
-          mt="2px"
-          fontFamily="Source Code Pro Thick"
-          fontSize="15px"
-          borderRadius="10px"
-          padding="17px 25px 16px 25px"
-          transition="0.5s"
+          h={isLargerThanMd ? 45 : 34}
+          w={isLargerThanMd ? 130 : 104}
+          fontFamily="Source Code Pro Slim"
+          fontSize={isLargerThanMd ? 18 : 12}
+          borderRadius={10}
+          padding="17px 25px"
+          transition="transform 0.5s ease-in-out;"
+          _active={{
+            backgroundImage: "",
+          }}
           _hover={{
-            color: "black",
+            bgGradient:
+              "linear-gradient(60.62deg, #5E7ECE 30.35%, #AE58BD 75.18%)",
           }}
         >
           Trade Now
         </Button>
         <Button
+          fontSize={isLargerThanMd ? 18 : 12}
+          h={isLargerThanMd ? 45 : 34}
           fontFamily="Source Code Pro Slim"
-          fontSize="14px"
+          bgColor="transparent"
+          _active={{}}
           _hover={{
             color: "#AE58BD",
           }}
@@ -75,7 +85,7 @@ export default function LandingHero() {
           Learn More {">"}
         </Button>
       </Flex>
-      <Box position="absolute" pt={90} zIndex={-1} w="100%">
+      <Box position="absolute" pt={150} zIndex={-1} w="100%">
         <Box
           position="absolute"
           w="100%"
