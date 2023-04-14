@@ -94,7 +94,7 @@ export default function LandingHero() {
         <Box
           position="absolute"
           w="100%"
-          height={isLargerThanMd ? "100%" : "70%"}
+          height={isLargerThanMd ? "100%" : "80%"}
           background="linear-gradient(to bottom, #090909 0%, rgba(9,9,9,0.7) 25%, #090909 50% )"
         />
         <Image src={bgWave} w="100%" />

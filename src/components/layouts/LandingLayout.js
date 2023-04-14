@@ -13,7 +13,7 @@ export default function LandingLayout() {
         align="center"
         m="0 auto"
         maxW="1650px"
-        minW="fit-content"
+        minW="1400px"
         bgColor="#090909"
       >
         <LandingHeader />
