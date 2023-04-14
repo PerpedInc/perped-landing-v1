@@ -21,7 +21,7 @@ export default function LandingHero() {
       zIndex={0}
       w="100%"
       h={isLargerThanMd ? 700 : "fit-content"}
-      pt={isLargerThanMd ? 160 : 120}
+      pt={isLargerThanMd ? 200 : 120}
     >
       <Heading
         letterSpacing={-1}

@@ -204,7 +204,7 @@ export default function LandingNav() {
             <DrawerOverlay />
             <DrawerContent bgColor="#141414">
               <DrawerCloseButton color={"white"} />
-              <DrawerHeader mt={14} ml={2}>
+              <DrawerHeader mt={10} ml={2}>
                 <Image width={160} height={50} src={PERPED} alt="Perped" />{" "}
                 <Button
                   bgColor="#3A3A3A"

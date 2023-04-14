@@ -12,8 +12,8 @@ export default function LandingLayout() {
         direction="column"
         align="center"
         m="0 auto"
-        maxW="1650px"
-        minW="1400px"
+        maxW="1700px"
+        minW="300px"
         bgColor="#090909"
       >
         <LandingHeader />
