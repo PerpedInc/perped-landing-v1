@@ -8,7 +8,14 @@ import LandingFooter from "../sections/landing/Landing_Footer";
 export default function LandingLayout() {
   return (
     <>
-      <Flex direction="column" align="center" m="0 auto" maxW="1500px">
+      <Flex
+        direction="column"
+        align="center"
+        m="0 auto"
+        maxW="1700px"
+        minW="300px"
+        bgColor="#090909"
+      >
         <LandingHeader />
         <LandingHero />
         <LandingFooter />

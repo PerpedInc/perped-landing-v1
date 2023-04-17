@@ -4,24 +4,45 @@ import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import "./index.css";
 
-import { ChakraProvider } from "@chakra-ui/react";
+import { ChakraProvider, extendTheme } from "@chakra-ui/react";
+
+const customTheme = extendTheme({
+  styles: {
+    global: {
+      body: {
+        bg: "#090909",
+        minHeight: "100vh",
+      },
+    },
+  },
+  components: {
+    Link: {
+      baseStyle: {
+        _hover: { color: "#AE58BD", textDecoration: "none" },
+      },
+    },
+    Flex: {
+      baseStyle: {
+        fontFamily: "Source Code Pro Thick",
+      },
+    },
+    Heading: {
+      baseStyle: {
+        fontFamily: "Source Code Pro Thick",
+      },
+    },
+    Text: {
+      baseStyle: {
+        fontFamily: "Source Code Pro Slim",
+      },
+    },
+  },
+});
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <ChakraProvider
-      theme={{
-        styles: {
-          global: {
-            body: {
-              minHeight: "100vh",
-              maxHeight: "fit-content",
-              backgroundColor: "#090909",
-            },
-          },
-        },
-      }}
-    >
+    <ChakraProvider theme={customTheme}>
       <App />
     </ChakraProvider>
   </React.StrictMode>
