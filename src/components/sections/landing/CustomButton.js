@@ -98,7 +98,9 @@ export default function CustomButton({ text }) {
           color: "#FFFFFF",
         }}
       >
-        <Text fontSize={isLargerThanMd ? 18 : 12}>{text}</Text>
+        <Text fontSize={isLargerThanMd ? 18 : 12} w="100%" h="100%">
+          {text}
+        </Text>
       </Box>
     </Button>
   );

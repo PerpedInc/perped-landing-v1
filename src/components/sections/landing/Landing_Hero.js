@@ -9,7 +9,7 @@ import {
 } from "@chakra-ui/react";
 import bgWave from "../../../images/bgWave.gif";
 
-import CustomButton from "./CutomButton";
+import CustomButton from "./CustomButton";
 
 export default function LandingHero() {
   const [isLargerThanMd] = useMediaQuery("(min-width: 1080px)");

@@ -31,7 +31,7 @@ import {
 
 import burger from "../../../images/burger.png";
 import { useState, useRef } from "react";
-import CustomButton from "./CutomButton";
+import CustomButton from "./CustomButton";
 
 const MenuElement = ({
   children,
