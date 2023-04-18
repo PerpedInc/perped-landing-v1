@@ -71,6 +71,9 @@ const MenuElement = ({
         justify="center"
         cursor="pointer"
         onClick={toggleFunction}
+        _hover={{
+          color: "#AE58BD",
+        }}
       >
         <Text fontSize={19}>{children}</Text>
         <FaChevronDown size={8} />
@@ -147,11 +150,13 @@ const DrawerItem = ({
         w="100%"
         cursor="pointer"
         onClick={toggleFunction}
+        color="white"
+        _hover={{ color: "#AE58BD" }}
       >
-        <Text fontSize={16} color="white" ml={3} mr={2}>
+        <Text fontSize={16} ml={3} mr={2}>
           {children}
         </Text>
-        <FaChevronDown size={7} color="white" />
+        <FaChevronDown size={7} />
       </Flex>
 
       <motion.div animate={boxAnimation}>
@@ -203,15 +208,15 @@ export default function LandingNav() {
             finalFocusRef={btnRef}
           >
             <DrawerOverlay />
-            <DrawerContent bgColor="#141414">
+            <DrawerContent bgColor="#0E0E0E">
               <DrawerCloseButton color={"white"} />
-              <DrawerHeader mt={10} ml={2}>
+              <DrawerHeader mt={10} ml={2} mb={7}>
                 <Image
                   width={160}
                   height={50}
                   src={PERPED}
                   alt="Perped"
-                  mb={5}
+                  mb={10}
                 />{" "}
                 <CustomButton text="Enter App" />
               </DrawerHeader>

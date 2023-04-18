@@ -17,7 +17,7 @@ export default function CustomButton({ text }) {
           ? "linear-gradient(105.62deg, #5E7ECE 21.35%, #AE58BD 61.18%)"
           : ""
       }
-      borderRadius="10px"
+      borderRadius={isLargerThanMd ? "10px" : "7px"}
       overflow="hidden"
       transition="0s"
       _hover={{}}
