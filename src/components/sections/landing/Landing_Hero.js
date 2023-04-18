@@ -23,7 +23,7 @@ export default function LandingHero() {
       zIndex={0}
       w="100%"
       h={isLargerThanMd ? 700 : "fit-content"}
-      pt={isLargerThanMd ? 200 : 120}
+      pt={isLargerThanMd ? 220 : 120}
     >
       <Heading
         letterSpacing={-1}
@@ -71,7 +71,7 @@ export default function LandingHero() {
       </Flex>
       <Box
         position="absolute"
-        pt={isLargerThanMd ? 150 : 250}
+        pt={isLargerThanMd ? 150 : 230}
         zIndex={-1}
         w="100%"
       >
