@@ -31,6 +31,7 @@ import {
 
 import burger from "../../../images/burger.png";
 import { useState, useRef } from "react";
+import CustomButton from "./CutomButton";
 
 const MenuElement = ({
   children,
@@ -205,24 +206,14 @@ export default function LandingNav() {
             <DrawerContent bgColor="#141414">
               <DrawerCloseButton color={"white"} />
               <DrawerHeader mt={10} ml={2}>
-                <Image width={160} height={50} src={PERPED} alt="Perped" />{" "}
-                <Button
-                  bgColor="#3A3A3A"
-                  bgGradient="linear-gradient(105.62deg, #5E7ECE 21.35%, #AE58BD 61.18%)"
-                  bgClip="border-box"
-                  fontFamily="Source Code Pro Thick"
-                  fontSize={14}
-                  borderRadius={5}
-                  ml={1}
-                  mt={10}
-                  mb={7}
-                  w={104}
-                  h={34}
-                  p="15px 50px"
-                  color="white"
-                >
-                  Enter App
-                </Button>
+                <Image
+                  width={160}
+                  height={50}
+                  src={PERPED}
+                  alt="Perped"
+                  mb={5}
+                />{" "}
+                <CustomButton text="Enter App" />
               </DrawerHeader>
 
               <DrawerBody>
@@ -336,27 +327,7 @@ export default function LandingNav() {
               Community
             </MenuElement>
 
-            <Button
-              bgColor="#3A3A3A"
-              bgGradient="linear-gradient(105.62deg, #5E7ECE 21.35%, #AE58BD 61.18%)"
-              bgClip="border-box"
-              fontFamily="Source Code Pro Thick"
-              fontSize={18}
-              borderRadius={10}
-              w={130}
-              h={45}
-              p="15px 50px"
-              transition="transform 0.5s ease-in-out;"
-              _active={{
-                backgroundImage: "",
-              }}
-              _hover={{
-                bgGradient:
-                  "linear-gradient(60.62deg, #5E7ECE 30.35%, #AE58BD 75.18%)",
-              }}
-            >
-              Enter App
-            </Button>
+            <CustomButton text="Enter App" />
           </Flex>
         </>
       )}

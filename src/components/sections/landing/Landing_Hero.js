@@ -9,6 +9,8 @@ import {
 } from "@chakra-ui/react";
 import bgWave from "../../../images/bgWave.gif";
 
+import CustomButton from "./CutomButton";
+
 export default function LandingHero() {
   const [isLargerThanMd] = useMediaQuery("(min-width: 1080px)");
 
@@ -52,26 +54,8 @@ export default function LandingHero() {
         m="30px 10px 10px 10px"
         pl={isLargerThanMd ? "60px" : 6}
       >
-        <Button
-          bgGradient="linear-gradient(105.62deg, #5E7ECE 21.35%, #AE58BD 61.18%)"
-          bgClip="border-box"
-          h={isLargerThanMd ? 45 : 34}
-          w={isLargerThanMd ? 130 : 104}
-          fontFamily="Source Code Pro Slim"
-          fontSize={isLargerThanMd ? 18 : 12}
-          borderRadius={10}
-          padding="17px 25px"
-          transition="transform 0.5s ease-in-out;"
-          _active={{
-            backgroundImage: "",
-          }}
-          _hover={{
-            bgGradient:
-              "linear-gradient(60.62deg, #5E7ECE 30.35%, #AE58BD 75.18%)",
-          }}
-        >
-          Trade Now
-        </Button>
+        <CustomButton text="Trade Now" />
+
         <Button
           fontSize={isLargerThanMd ? 18 : 12}
           h={isLargerThanMd ? 45 : 34}
