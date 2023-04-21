@@ -45,8 +45,7 @@ export default function LandingHero() {
         pl={isLargerThanMd ? "60px" : 6}
         fontSize={isLargerThanMd ? 21 : 12}
       >
-        The First Full On-Chain Perpetuals Derivatives Platform For Real World
-        Assets
+        The First Fully Featured Perpetuals Platform For Real-World Assets.
       </Text>
       <Flex
         direction="row"

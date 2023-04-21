@@ -6,7 +6,6 @@ import {
   Flex,
   Link,
   Button,
-  Icon,
   Text,
   Image,
   Box,
@@ -21,17 +20,10 @@ import {
   DrawerCloseButton,
 } from "@chakra-ui/react";
 
-import {
-  FaDiscord,
-  FaTwitter,
-  FaYoutube,
-  FaTelegram,
-  FaLinkedin,
-} from "react-icons/fa";
-
 import burger from "../../../images/burger.png";
 import { useState, useRef } from "react";
 import CustomButton from "./CustomButton";
+import Icons from "./Icons";
 
 const MenuElement = ({
   children,
@@ -266,23 +258,7 @@ export default function LandingNav() {
               </DrawerBody>
 
               <DrawerFooter>
-                <Flex direction="row" gap={3} ml={2} w="100%">
-                  <Link href="#">
-                    <Icon as={FaDiscord} boxSize={30} color="#9d60c1" />
-                  </Link>
-                  <Link href="#">
-                    <Icon as={FaTwitter} boxSize={30} color="#846cc6" />
-                  </Link>
-                  <Link href="#">
-                    <Icon as={FaYoutube} boxSize={30} color="#7b70c8" />
-                  </Link>
-                  <Link href="#">
-                    <Icon as={FaLinkedin} boxSize={30} color="#6d76cb" />
-                  </Link>
-                  <Link href="#">
-                    <Icon as={FaTelegram} boxSize={30} color="#5e7ece" />
-                  </Link>
-                </Flex>
+                <Icons />
               </DrawerFooter>
             </DrawerContent>
           </Drawer>

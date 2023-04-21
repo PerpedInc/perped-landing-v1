@@ -1,20 +1,14 @@
 import {
   Flex,
   Link,
-  Icon,
   Heading,
   Text,
   Spacer,
   Image,
   useMediaQuery,
 } from "@chakra-ui/react";
-import {
-  FaDiscord,
-  FaTwitter,
-  FaYoutube,
-  FaTelegram,
-  FaLinkedin,
-} from "react-icons/fa";
+
+import Icons from "./Icons";
 
 import PERPED from "../../../images/PERPED.png";
 
@@ -48,23 +42,7 @@ export default function LandingFooter() {
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
                 eiusmod tempor incididunt ut labore et dolore magna aliqua.
               </Text>
-              <Flex direction="row" gap={3}>
-                <Link href="#">
-                  <Icon as={FaDiscord} boxSize={30} color="#9d60c1" />
-                </Link>
-                <Link href="#">
-                  <Icon as={FaTwitter} boxSize={30} color="#846cc6" />
-                </Link>
-                <Link href="#">
-                  <Icon as={FaYoutube} boxSize={30} color="#7b70c8" />
-                </Link>
-                <Link href="#">
-                  <Icon as={FaLinkedin} boxSize={30} color="#6d76cb" />
-                </Link>
-                <Link href="#">
-                  <Icon as={FaTelegram} boxSize={30} color="#5e7ece" />
-                </Link>
-              </Flex>
+              <Icons />
             </Flex>
             <Spacer />
             <Flex direction="row" gap={70} color="gray" mr={30}>
