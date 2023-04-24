@@ -9,6 +9,8 @@ import {
 } from "@chakra-ui/react";
 import bgWave from "../../../images/bgWave.gif";
 
+import CustomButton from "./CustomButton";
+
 export default function LandingHero() {
   const [isLargerThanMd] = useMediaQuery("(min-width: 1080px)");
 
@@ -21,7 +23,7 @@ export default function LandingHero() {
       zIndex={0}
       w="100%"
       h={isLargerThanMd ? 700 : "fit-content"}
-      pt={isLargerThanMd ? 200 : 120}
+      pt={isLargerThanMd ? 230 : 120}
     >
       <Heading
         letterSpacing={-1}
@@ -43,8 +45,7 @@ export default function LandingHero() {
         pl={isLargerThanMd ? "60px" : 6}
         fontSize={isLargerThanMd ? 21 : 12}
       >
-        The First True On-Chain Perpetuals Derivatives Platform For Real World
-        Assets
+        The First Fully Featured Perpetuals Platform For Real-World Assets.
       </Text>
       <Flex
         direction="row"
@@ -52,26 +53,8 @@ export default function LandingHero() {
         m="30px 10px 10px 10px"
         pl={isLargerThanMd ? "60px" : 6}
       >
-        <Button
-          bgGradient="linear-gradient(105.62deg, #5E7ECE 21.35%, #AE58BD 61.18%)"
-          bgClip="border-box"
-          h={isLargerThanMd ? 45 : 34}
-          w={isLargerThanMd ? 130 : 104}
-          fontFamily="Source Code Pro Slim"
-          fontSize={isLargerThanMd ? 18 : 12}
-          borderRadius={10}
-          padding="17px 25px"
-          transition="transform 0.5s ease-in-out;"
-          _active={{
-            backgroundImage: "",
-          }}
-          _hover={{
-            bgGradient:
-              "linear-gradient(60.62deg, #5E7ECE 30.35%, #AE58BD 75.18%)",
-          }}
-        >
-          Trade Now
-        </Button>
+        <CustomButton text="Trade Now" />
+
         <Button
           fontSize={isLargerThanMd ? 18 : 12}
           h={isLargerThanMd ? 45 : 34}

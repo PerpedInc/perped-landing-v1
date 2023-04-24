@@ -6,7 +6,6 @@ import {
   Flex,
   Link,
   Button,
-  Icon,
   Text,
   Image,
   Box,
@@ -21,16 +20,10 @@ import {
   DrawerCloseButton,
 } from "@chakra-ui/react";
 
-import {
-  FaDiscord,
-  FaTwitter,
-  FaYoutube,
-  FaTelegram,
-  FaLinkedin,
-} from "react-icons/fa";
-
 import burger from "../../../images/burger.png";
 import { useState, useRef } from "react";
+import CustomButton from "./CustomButton";
+import Icons from "./Icons";
 
 const MenuElement = ({
   children,
@@ -70,6 +63,9 @@ const MenuElement = ({
         justify="center"
         cursor="pointer"
         onClick={toggleFunction}
+        _hover={{
+          color: "#AE58BD",
+        }}
       >
         <Text fontSize={19}>{children}</Text>
         <FaChevronDown size={8} />
@@ -146,11 +142,13 @@ const DrawerItem = ({
         w="100%"
         cursor="pointer"
         onClick={toggleFunction}
+        color="white"
+        _hover={{ color: "#AE58BD" }}
       >
-        <Text fontSize={16} color="white" ml={3} mr={2}>
+        <Text fontSize={16} ml={3} mr={2}>
           {children}
         </Text>
-        <FaChevronDown size={7} color="white" />
+        <FaChevronDown size={7} />
       </Flex>
 
       <motion.div animate={boxAnimation}>
@@ -202,27 +200,17 @@ export default function LandingNav() {
             finalFocusRef={btnRef}
           >
             <DrawerOverlay />
-            <DrawerContent bgColor="#141414">
+            <DrawerContent bgColor="#0E0E0E">
               <DrawerCloseButton color={"white"} />
-              <DrawerHeader mt={10} ml={2}>
-                <Image width={160} height={50} src={PERPED} alt="Perped" />{" "}
-                <Button
-                  bgColor="#3A3A3A"
-                  bgGradient="linear-gradient(105.62deg, #5E7ECE 21.35%, #AE58BD 61.18%)"
-                  bgClip="border-box"
-                  fontFamily="Source Code Pro Thick"
-                  fontSize={14}
-                  borderRadius={5}
-                  ml={1}
-                  mt={10}
-                  mb={7}
-                  w={104}
-                  h={34}
-                  p="15px 50px"
-                  color="white"
-                >
-                  Enter App
-                </Button>
+              <DrawerHeader mt={10} ml={2} mb={7}>
+                <Image
+                  width={160}
+                  height={50}
+                  src={PERPED}
+                  alt="Perped"
+                  mb={10}
+                />{" "}
+                <CustomButton text="Enter App" />
               </DrawerHeader>
 
               <DrawerBody>
@@ -270,23 +258,7 @@ export default function LandingNav() {
               </DrawerBody>
 
               <DrawerFooter>
-                <Flex direction="row" gap={3} ml={2} w="100%">
-                  <Link href="#">
-                    <Icon as={FaDiscord} boxSize={30} color="#9d60c1" />
-                  </Link>
-                  <Link href="#">
-                    <Icon as={FaTwitter} boxSize={30} color="#846cc6" />
-                  </Link>
-                  <Link href="#">
-                    <Icon as={FaYoutube} boxSize={30} color="#7b70c8" />
-                  </Link>
-                  <Link href="#">
-                    <Icon as={FaLinkedin} boxSize={30} color="#6d76cb" />
-                  </Link>
-                  <Link href="#">
-                    <Icon as={FaTelegram} boxSize={30} color="#5e7ece" />
-                  </Link>
-                </Flex>
+                <Icons />
               </DrawerFooter>
             </DrawerContent>
           </Drawer>
@@ -336,27 +308,7 @@ export default function LandingNav() {
               Community
             </MenuElement>
 
-            <Button
-              bgColor="#3A3A3A"
-              bgGradient="linear-gradient(105.62deg, #5E7ECE 21.35%, #AE58BD 61.18%)"
-              bgClip="border-box"
-              fontFamily="Source Code Pro Thick"
-              fontSize={18}
-              borderRadius={10}
-              w={130}
-              h={45}
-              p="15px 50px"
-              transition="transform 0.5s ease-in-out;"
-              _active={{
-                backgroundImage: "",
-              }}
-              _hover={{
-                bgGradient:
-                  "linear-gradient(60.62deg, #5E7ECE 30.35%, #AE58BD 75.18%)",
-              }}
-            >
-              Enter App
-            </Button>
+            <CustomButton text="Enter App" />
           </Flex>
         </>
       )}
