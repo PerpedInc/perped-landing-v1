@@ -38,9 +38,11 @@ export default function LandingFooter() {
                 src={PERPED}
                 alt="Perped"
               />
-              <Text color="gray" w="60%" mb={5} fontSize={14}>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              <Text color="gray" w="70%" mb={5} fontSize={14}>
+                Perped is a fully featured decentralized perpetuals platform
+                that aims to bring real-world asset trading on-chain, including
+                the complete list of S&P 500 Assets, Forex, and Commodities
+                using next-gen First-party Oracles.
               </Text>
               <Icons />
             </Flex>
@@ -52,8 +54,7 @@ export default function LandingFooter() {
                 </Heading>
                 <Link href="#">Blog</Link>
                 <Link href="#">FAQs</Link>
-                <Link href="#">DOCs</Link>
-                <Link href="#">Academy</Link>
+                <Link href="#">Docs</Link>
               </Flex>
               <Flex direction="column" gap={15}>
                 <Heading size="sm" color="white" mb={1}>
@@ -61,14 +62,6 @@ export default function LandingFooter() {
                 </Heading>
                 <Link href="#">Goal</Link>
                 <Link href="#">Brand</Link>
-              </Flex>
-              <Flex direction="column" gap={15}>
-                <Heading size="sm" color="white" mb={1}>
-                  Governence
-                </Heading>
-                <Link href="#">Dashboard</Link>
-                <Link href="#">Forums</Link>
-                <Link href="#">Proposes</Link>
               </Flex>
               <Flex direction="column" gap={15}>
                 <Heading size="sm" color="white" mb={1}>
