@@ -173,16 +173,13 @@ export default function LandingNav() {
   const toggleCompany = () => {
     setShowCompany(!showCompany);
   };
-  const toggleGovernence = () => {
-    setShowGovernence(!showGovernence);
-  };
+
   const toggleCommunity = () => {
     setShowCommunity(!showCommunity);
   };
 
   const [showAbout, setShowAbout] = useState(false);
   const [showCompany, setShowCompany] = useState(false);
-  const [showGovernence, setShowGovernence] = useState(false);
   const [showCommunity, setShowCommunity] = useState(false);
 
   const { isOpen, onOpen, onClose } = useDisclosure();
@@ -218,7 +215,7 @@ export default function LandingNav() {
                   toggleFunction={toggleAbout}
                   toggleState={showAbout}
                   subLinksLocation={["#", "#", "#", "#"]}
-                  subLinksName={["Blogs", "FAQs", "DOCs", "Academy"]}
+                  subLinksName={["Blogs", "FAQs", "Docs"]}
                 >
                   About
                 </DrawerItem>
@@ -230,15 +227,6 @@ export default function LandingNav() {
                   subLinksName={["Goal", "Brand"]}
                 >
                   Company
-                </DrawerItem>
-
-                <DrawerItem
-                  toggleFunction={toggleGovernence}
-                  toggleState={showGovernence}
-                  subLinksLocation={["#", "#", "#"]}
-                  subLinksName={["Dashboard", "Forums", "Proposes"]}
-                >
-                  Governence
                 </DrawerItem>
 
                 <DrawerItem
@@ -269,8 +257,8 @@ export default function LandingNav() {
             <MenuElement
               toggleFunction={toggleAbout}
               toggleState={showAbout}
-              subLinksLocation={["#", "#", "#", "#"]}
-              subLinksName={["Blogs", "FAQs", "DOCs", "Academy"]}
+              subLinksLocation={["#", "#", "#"]}
+              subLinksName={["Blogs", "FAQs", "Docs"]}
             >
               About
             </MenuElement>
@@ -282,15 +270,6 @@ export default function LandingNav() {
               subLinksName={["Goal", "Brand"]}
             >
               Company
-            </MenuElement>
-
-            <MenuElement
-              toggleFunction={toggleGovernence}
-              toggleState={showGovernence}
-              subLinksLocation={["#", "#", "#"]}
-              subLinksName={["Dashboard", "Forums", "Proposes"]}
-            >
-              Governence
             </MenuElement>
 
             <MenuElement
