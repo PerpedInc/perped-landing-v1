@@ -64,6 +64,9 @@ export default function LandingHero() {
           _hover={{
             color: "#AE58BD",
           }}
+          onClick={() => {
+            window.open("https://perped.gitbook.io/");
+          }}
         >
           Learn More {">"}
         </Button>

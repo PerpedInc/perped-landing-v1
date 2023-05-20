@@ -42,7 +42,12 @@ const MenuElement = ({
     LinksArray.push(
       <>
         <Box display="block" fontSize={18}>
-          <Link key={index} href={`/${link}`} fontFamily="Source Code Pro Slim">
+          <Link
+            key={index}
+            href={`${link}`}
+            target="_blank"
+            fontFamily="Source Code Pro Slim"
+          >
             {name}
           </Link>
         </Box>
@@ -121,7 +126,12 @@ const DrawerItem = ({
     LinksArray.push(
       <>
         <Box display="block" fontSize={18}>
-          <Link key={index} href={`/${link}`} fontFamily="Source Code Pro Slim">
+          <Link
+            key={index}
+            href={`${link}`}
+            target="_blank"
+            fontFamily="Source Code Pro Slim"
+          >
             {name}
           </Link>
         </Box>
@@ -214,7 +224,7 @@ export default function LandingNav() {
                 <DrawerItem
                   toggleFunction={toggleAbout}
                   toggleState={showAbout}
-                  subLinksLocation={["#", "#", "#", "#"]}
+                  subLinksLocation={["#", "#", "https://perped.gitbook.io/"]}
                   subLinksName={["Blogs", "FAQs", "Docs"]}
                 >
                   About
@@ -257,7 +267,7 @@ export default function LandingNav() {
             <MenuElement
               toggleFunction={toggleAbout}
               toggleState={showAbout}
-              subLinksLocation={["#", "#", "#"]}
+              subLinksLocation={["#", "#", "https://perped.gitbook.io/"]}
               subLinksName={["Blogs", "FAQs", "Docs"]}
             >
               About
