@@ -297,7 +297,7 @@ export default function LandingNav() {
               Community
             </MenuElement>
 
-            <CustomButton text="Enter App" />
+            <Link href="https://app.perped.com/"><CustomButton text="Enter App" /></Link>
           </Flex>
         </>
       )}
