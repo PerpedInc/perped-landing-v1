@@ -230,7 +230,6 @@ export default function LandingNav() {
                 >
                   About
                 </DrawerItem>
-
                 <DrawerItem
                   toggleFunction={toggleCompany}
                   toggleState={showCompany}
@@ -239,13 +238,18 @@ export default function LandingNav() {
                 >
                   Company
                 </DrawerItem>
-
                 <DrawerItem
                   toggleFunction={toggleCommunity}
                   toggleState={showCommunity}
-                  subLinksLocation={["#", "#", "#", "#", "#"]}
+                  subLinksLocation={[
+                    // "https://discord.gg/9Ac9DDEg6T",
+                    "https://twitter.com/0xPerped",
+                    "#",
+                    "#",
+                    "https://t.me/+cVUf9a8REyBhMWNk",
+                  ]}
                   subLinksName={[
-                    "Discord",
+                    // "Discord",
                     "Twitter",
                     "Youtube",
                     "LinkedIn",
@@ -286,9 +290,15 @@ export default function LandingNav() {
             <MenuElement
               toggleFunction={toggleCommunity}
               toggleState={showCommunity}
-              subLinksLocation={["#", "#", "#", "#", "#"]}
+              subLinksLocation={[
+                // "https://discord.gg/9Ac9DDEg6T",
+                "https://twitter.com/0xPerped",
+                "#",
+                "#",
+                "https://t.me/+cVUf9a8REyBhMWNk",
+              ]}
               subLinksName={[
-                "Discord",
+                // "Discord",
                 "Twitter",
                 "Youtube",
                 "LinkedIn",
