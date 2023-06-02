@@ -1,6 +1,5 @@
 import {
   Image,
-  Link,
   Box,
   Heading,
   Text,
@@ -54,9 +53,7 @@ export default function LandingHero() {
         m="30px 10px 10px 10px"
         pl={isLargerThanMd ? "60px" : 6}
       >
-        <Link href="https://app.perped.com/">
-          <CustomButton text="Trade Now" />
-        </Link>
+        <CustomButton text="Trade Now" />
 
         <Button
           fontSize={isLargerThanMd ? 18 : 12}
@@ -67,8 +64,11 @@ export default function LandingHero() {
           _hover={{
             color: "#AE58BD",
           }}
+          onClick={() => {
+            window.open("https://perped.gitbook.io/");
+          }}
         >
-          <Link href="https://perped.gitbook.io/">Learn More {">"}</Link>
+          Learn More {">"}
         </Button>
       </Flex>
       <Box

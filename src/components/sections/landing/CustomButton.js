@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Box, Text, Button, useMediaQuery } from "@chakra-ui/react";
+import { Box, Button, useMediaQuery, Link } from "@chakra-ui/react";
 
 export default function CustomButton({ text }) {
   const [isHovered, setIsHovered] = useState(false);
@@ -98,9 +98,16 @@ export default function CustomButton({ text }) {
           color: "#FFFFFF",
         }}
       >
-        <Text fontSize={isLargerThanMd ? 18 : 12} w="100%" h="100%">
+        <Link
+          fontSize={isLargerThanMd ? 18 : 12}
+          w="100%"
+          h="100%"
+          href="https://app.perped.com"
+          target="_blank"
+          _hover={{}}
+        >
           {text}
-        </Text>
+        </Link>
       </Box>
     </Button>
   );

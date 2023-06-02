@@ -54,7 +54,9 @@ export default function LandingFooter() {
                 </Heading>
                 <Link href="#">Blog</Link>
                 <Link href="#">FAQs</Link>
-                <Link href="#">Docs</Link>
+                <Link href="https://perped.gitbook.io/" target="_blank">
+                  Docs
+                </Link>
               </Flex>
               <Flex direction="column" gap={15}>
                 <Heading size="sm" color="white" mb={1}>
