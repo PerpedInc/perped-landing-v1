@@ -54,7 +54,6 @@ export default function LandingHero() {
         pl={isLargerThanMd ? "60px" : 6}
       >
         <CustomButton text="Trade Now" />
-
         <Button
           fontSize={isLargerThanMd ? 18 : 12}
           h={isLargerThanMd ? 45 : 34}

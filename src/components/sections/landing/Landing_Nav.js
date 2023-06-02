@@ -216,7 +216,8 @@ export default function LandingNav() {
                   src={PERPED}
                   alt="Perped"
                   mb={10}
-                />{" "}
+                />
+
                 <CustomButton text="Enter App" />
               </DrawerHeader>
 
