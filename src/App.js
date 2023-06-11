@@ -5,17 +5,28 @@ import { useEffect, useState } from "react";
 
 import LandingLayout from "./components/layouts/LandingLayout";
 
-function App() {
-  const [isFontLoaded, setIsFontLoaded] = useState(false);
+const FontWrapper = ({ children }) => {
+  const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
-    // Check if the font is loaded
-    document.fonts.ready.then(() => {
-      setIsFontLoaded(true);
-    });
+    // Wait for the font to load before showing the text
+    document.fonts.ready.then(() => setIsVisible(true));
   }, []);
 
-  return <>{isFontLoaded ? <LandingLayout /> : null}</>;
-}
+  return (
+    <div style={{ visibility: isVisible ? "visible" : "hidden" }}>
+      {children}
+    </div>
+  );
+};
 
+function App() {
+  return (
+    <>
+      <FontWrapper>
+        <LandingLayout />
+      </FontWrapper>
+    </>
+  );
+}
 export default App;
