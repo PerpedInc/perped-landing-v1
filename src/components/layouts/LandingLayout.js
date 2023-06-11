@@ -1,5 +1,4 @@
 import { Flex } from "@chakra-ui/react";
-import "./fonts.css";
 
 import LandingHeader from "../sections/landing/Landing_Header";
 import LandingHero from "../sections/landing/Landing_Hero";

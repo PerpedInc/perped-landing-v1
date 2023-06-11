@@ -19,6 +19,7 @@ const customTheme = extendTheme({
     Link: {
       baseStyle: {
         _hover: { color: "#AE58BD", textDecoration: "none" },
+        fontFamily: "Source Code Pro Slim",
       },
     },
     Flex: {

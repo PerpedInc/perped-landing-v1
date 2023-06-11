@@ -42,7 +42,12 @@ const MenuElement = ({
     LinksArray.push(
       <>
         <Box display="block" fontSize={18}>
-          <Link key={index} href={`/${link}`} fontFamily="Source Code Pro Slim">
+          <Link
+            key={index}
+            href={`${link}`}
+            target="_blank"
+            fontFamily="Source Code Pro Slim"
+          >
             {name}
           </Link>
         </Box>
@@ -121,7 +126,12 @@ const DrawerItem = ({
     LinksArray.push(
       <>
         <Box display="block" fontSize={18}>
-          <Link key={index} href={`/${link}`} fontFamily="Source Code Pro Slim">
+          <Link
+            key={index}
+            href={`${link}`}
+            target="_blank"
+            fontFamily="Source Code Pro Slim"
+          >
             {name}
           </Link>
         </Box>
@@ -206,7 +216,8 @@ export default function LandingNav() {
                   src={PERPED}
                   alt="Perped"
                   mb={10}
-                />{" "}
+                />
+
                 <CustomButton text="Enter App" />
               </DrawerHeader>
 
@@ -214,12 +225,11 @@ export default function LandingNav() {
                 <DrawerItem
                   toggleFunction={toggleAbout}
                   toggleState={showAbout}
-                  subLinksLocation={["#", "#", "#", "#"]}
+                  subLinksLocation={["#", "#", "https://perped.gitbook.io/"]}
                   subLinksName={["Blogs", "FAQs", "Docs"]}
                 >
                   About
                 </DrawerItem>
-
                 <DrawerItem
                   toggleFunction={toggleCompany}
                   toggleState={showCompany}
@@ -228,13 +238,18 @@ export default function LandingNav() {
                 >
                   Company
                 </DrawerItem>
-
                 <DrawerItem
                   toggleFunction={toggleCommunity}
                   toggleState={showCommunity}
-                  subLinksLocation={["#", "#", "#", "#", "#"]}
+                  subLinksLocation={[
+                    // "https://discord.gg/9Ac9DDEg6T",
+                    "https://twitter.com/0xPerped",
+                    "#",
+                    "#",
+                    "https://t.me/+cVUf9a8REyBhMWNk",
+                  ]}
                   subLinksName={[
-                    "Discord",
+                    // "Discord",
                     "Twitter",
                     "Youtube",
                     "LinkedIn",
@@ -257,7 +272,7 @@ export default function LandingNav() {
             <MenuElement
               toggleFunction={toggleAbout}
               toggleState={showAbout}
-              subLinksLocation={["#", "#", "#"]}
+              subLinksLocation={["#", "#", "https://perped.gitbook.io/"]}
               subLinksName={["Blogs", "FAQs", "Docs"]}
             >
               About
@@ -275,9 +290,15 @@ export default function LandingNav() {
             <MenuElement
               toggleFunction={toggleCommunity}
               toggleState={showCommunity}
-              subLinksLocation={["#", "#", "#", "#", "#"]}
+              subLinksLocation={[
+                // "https://discord.gg/9Ac9DDEg6T",
+                "https://twitter.com/0xPerped",
+                "#",
+                "#",
+                "https://t.me/+cVUf9a8REyBhMWNk",
+              ]}
               subLinksName={[
-                "Discord",
+                // "Discord",
                 "Twitter",
                 "Youtube",
                 "LinkedIn",
@@ -287,7 +308,7 @@ export default function LandingNav() {
               Community
             </MenuElement>
 
-            <Link href="https://app.perped.com/"><CustomButton text="Enter App" /></Link>
+            <CustomButton text="Enter App" />
           </Flex>
         </>
       )}

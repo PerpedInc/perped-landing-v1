@@ -54,7 +54,9 @@ export default function LandingFooter() {
                 </Heading>
                 <Link href="#">Blog</Link>
                 <Link href="#">FAQs</Link>
-                <Link href="#">Docs</Link>
+                <Link href="https://perped.gitbook.io/" target="_blank">
+                  Docs
+                </Link>
               </Flex>
               <Flex direction="column" gap={15}>
                 <Heading size="sm" color="white" mb={1}>
@@ -67,11 +69,17 @@ export default function LandingFooter() {
                 <Heading size="sm" color="white" mb={1}>
                   Community
                 </Heading>
-                <Link href="#">Discord</Link>
-                <Link href="#">Twitter</Link>
+                {/* <Link href="https://discord.gg/9Ac9DDEg6T" target="_blank">
+                  Discord
+                </Link> */}
+                <Link href="https://twitter.com/0xPerped" target="_blank">
+                  Twitter
+                </Link>
                 <Link href="#">Youtube</Link>
                 <Link href="#">LinkedIn</Link>
-                <Link href="#">Telegram</Link>
+                <Link href="https://t.me/+cVUf9a8REyBhMWNk" target="_blank">
+                  Telegram
+                </Link>
               </Flex>
             </Flex>
           </Flex>
