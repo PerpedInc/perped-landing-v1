@@ -21,9 +21,8 @@ export default function Icons() {
           <stop stopColor="#AE58BD" offset="100%" />
         </linearGradient>
       </svg>
-
       <Flex direction="row" gap={3} w="100%">
-        <Link href="#">
+        {/* <Link href="https://discord.gg/9Ac9DDEg6T" target="_blank">
           <Icon
             as={FaDiscord}
             boxSize={7}
@@ -32,8 +31,8 @@ export default function Icons() {
               fill: "url(#purple-cyan)",
             }}
           />
-        </Link>
-        <Link href="#">
+        </Link> */}
+        <Link href="https://twitter.com/0xPerped" target="_blank">
           <Icon
             as={FaTwitter}
             boxSize={7}
@@ -59,7 +58,7 @@ export default function Icons() {
             _hover={{ fill: "url(#purple-cyan)" }}
           />
         </Link>
-        <Link href="#">
+        <Link href="https://t.me/+cVUf9a8REyBhMWNk" target="_blank">
           <Icon
             as={FaTelegram}
             boxSize={7}
