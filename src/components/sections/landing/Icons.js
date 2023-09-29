@@ -1,11 +1,5 @@
 import { Flex, Link, Icon } from "@chakra-ui/react";
-import {
-  FaDiscord,
-  FaTwitter,
-  FaYoutube,
-  FaTelegram,
-  FaLinkedin,
-} from "react-icons/fa";
+import { FaTwitter, FaYoutube, FaTelegram, FaLinkedin } from "react-icons/fa";
 export default function Icons() {
   return (
     <>

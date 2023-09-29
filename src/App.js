@@ -5,11 +5,11 @@ import { useEffect, useState } from "react";
 
 import LandingLayout from "./components/layouts/LandingLayout";
 
+// Wait for the font to load before showing the text
 const FontWrapper = ({ children }) => {
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
-    // Wait for the font to load before showing the text
     document.fonts.ready.then(() => setIsVisible(true));
   }, []);
 
