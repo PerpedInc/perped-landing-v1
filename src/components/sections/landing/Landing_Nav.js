@@ -1,6 +1,10 @@
+import { useState, useRef } from "react";
 import { motion } from "framer-motion";
+
 import { FaChevronDown } from "react-icons/fa";
+
 import PERPED from "../../../images/PERPED.png";
+import burger from "../../../images/burger.png";
 
 import {
   Flex,
@@ -20,10 +24,10 @@ import {
   DrawerCloseButton,
 } from "@chakra-ui/react";
 
-import burger from "../../../images/burger.png";
-import { useState, useRef } from "react";
 import CustomButton from "./CustomButton";
 import Icons from "./Icons";
+
+import { useFaq } from "../../../contexts/FaqContext";
 
 const MenuElement = ({
   children,
@@ -32,6 +36,8 @@ const MenuElement = ({
   subLinksLocation,
   subLinksName,
 }) => {
+  const { toggleFaq } = useFaq();
+
   var LinksArray = [];
 
   var limit = subLinksLocation.length;
@@ -39,20 +45,38 @@ const MenuElement = ({
     const link = subLinksLocation[index];
     const name = subLinksName[index];
 
-    LinksArray.push(
-      <>
-        <Box display="block" fontSize={18}>
-          <Link
-            key={index}
-            href={`${link}`}
-            target="_blank"
-            fontFamily="Source Code Pro Slim"
-          >
-            {name}
-          </Link>
-        </Box>
-      </>
-    );
+    if (name === "FAQs") {
+      LinksArray.push(
+        <>
+          <Box key={index} display="block" fontSize={18}>
+            <Button
+              onClick={toggleFaq}
+              backgroundColor={"transparent"}
+              p={0}
+              _hover={{ color: "#AE58BD", textDecoration: "none" }}
+              _active={{}}
+              fontFamily="Source Code Pro Slim"
+            >
+              FAQs
+            </Button>
+          </Box>
+        </>
+      );
+    } else {
+      LinksArray.push(
+        <>
+          <Box key={index} display="block" fontSize={18}>
+            <Link
+              href={`${link}`}
+              target="_blank"
+              fontFamily="Source Code Pro Slim"
+            >
+              {name}
+            </Link>
+          </Box>
+        </>
+      );
+    }
   }
 
   const boxAnimation = {

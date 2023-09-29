@@ -1,0 +1,33 @@
+export const faqQuestions = [
+  "What Is Perped?",
+  "What is an on-chain perpetual?",
+  "What is futures trading?",
+  "What are real world assets?",
+  "How is Perped unique?",
+  "How do I begin trading on Perped?",
+  "What chains does Perped run on?",
+  "How does Perped get price data for trading?",
+  "Is Perped secure to use?",
+  "Does Perped have a token? what is it used for?",
+  "What is a dao?",
+  "What is the total token supply?",
+  "How can I contact the Perped team?",
+  "How can I join the Perped team?",
+];
+
+export const faqAnswers = [
+  "Perped is the first fully featured perpetuals platform for real-world assets.",
+  "A perpetual is a special type of futures contract, but unlike the traditional form of futures, it doesn’t have an expiry date. Perped brings all of this on-chain powered by smart contracts.",
+  "Futures trading is an agreement to buy or sell a commodity, currency, or another instrument at a predetermined price without any expiry date.",
+  "Real World Assets (RWAs) are tangible assets, such as real estate properties, artwork, and commodities, represented as digital tokens on a blockchain network.",
+  "Perped is powered by a unique oracle model that helps bring any asset on-chain without much turbulence.",
+  "Go to the Home page -> Click on 'Trade Now'/'Enter Now', this will take you to the main application -> Connect your wallet -> Select the stock you want to trade -> Enter the amount of stocks you would like to buy -> Enter the amount of leverage you want on your trade -> Select your position type(long/short) -> Click buy. After this you will be asked to approve the required amount of USDC for the trade to happen. As soon as the transaction is confirmed another transaction will be initiated that on confirmation finally assigns the position to the user. All of this can be viewed under the 'Open Positions' section.",
+  "Perped is going to be launched on Polygon zkEVM and more L2s in the coming future.",
+  "Perped is powered by API3's flagship product 'Airnode'. Based on the Request-Response Protocol, it helps the consumer get data feeds information directly from the provider with no dependence on a middleman.",
+  "Perped's smart contracts were audited successfully by SlowMist",
+  "Perped will have a governence token and the main purpose would be to help gain real yield in real-time along with voting abilities in Perped DAO that's set to be launched later in the year 2024.",
+  "A decentralized autonomous organization (DAO) is an emerging form of legal structure that has no central governing body and whose members share a common goal to act in the best interest of the entity. DAOs are used to make decisions in a bottom-up management approach.",
+  "Only 100 million tokens will ever be minted. The details of the tokenomics can be viewed on the documentation.",
+  "We have multiple social media links available at the website's footer and on the navigation menu under the 'Contact' section. Feel free to message us on those  mediums.",
+  "We don't have any open positions available per se but feel free to contact us under circumstances you feel that your skills are a really good match for the platform's future plans.",
+];

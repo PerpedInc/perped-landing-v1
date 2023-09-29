@@ -2,9 +2,14 @@ import { Flex } from "@chakra-ui/react";
 
 import LandingHeader from "../sections/landing/Landing_Header";
 import LandingHero from "../sections/landing/Landing_Hero";
+import FaqHero from "../sections/faq/Faq_Hero";
 import LandingFooter from "../sections/landing/Landing_Footer";
 
+import { useFaq } from "../../contexts/FaqContext";
+
 export default function LandingLayout() {
+  const { faqOpen } = useFaq();
+
   return (
     <>
       <Flex
@@ -16,7 +21,7 @@ export default function LandingLayout() {
         bgColor="#090909"
       >
         <LandingHeader />
-        <LandingHero />
+        {!faqOpen ? <LandingHero /> : <FaqHero />}
         <LandingFooter />
       </Flex>
     </>
