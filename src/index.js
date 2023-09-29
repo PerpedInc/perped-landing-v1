@@ -6,6 +6,8 @@ import "./index.css";
 
 import { ChakraProvider, extendTheme } from "@chakra-ui/react";
 
+import { FaqProvider } from "./contexts/FaqContext";
+
 const customTheme = extendTheme({
   styles: {
     global: {
@@ -43,9 +45,11 @@ const customTheme = extendTheme({
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <ChakraProvider theme={customTheme}>
-      <App />
-    </ChakraProvider>
+    <FaqProvider>
+      <ChakraProvider theme={customTheme}>
+        <App />
+      </ChakraProvider>
+    </FaqProvider>
   </React.StrictMode>
 );
 
