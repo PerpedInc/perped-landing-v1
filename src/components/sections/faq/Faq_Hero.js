@@ -20,7 +20,7 @@ function QAAItem({ q, a, isLast }) {
         p={5}
       >
         <Flex direction="row">
-          <Heading fontSize="30px" color="white">
+          <Heading fontSize="24px" color="white">
             {q}
           </Heading>
           <Spacer />
@@ -28,7 +28,7 @@ function QAAItem({ q, a, isLast }) {
         </Flex>
         {toggle ? (
           <Box mt={5}>
-            <Text fontSize="20px" color="white">
+            <Text fontSize="15px" color="white">
               {a}
             </Text>
           </Box>
@@ -81,7 +81,12 @@ export default function FaqHero() {
             align="center"
             pb="60px"
           >
-            <Heading size="3xl" color="white">
+            <Heading
+              fontSize="50px"
+              color="white"
+              fontFamily="Source Code Pro"
+              lineHeight="17px"
+            >
               FAQs
             </Heading>
           </Box>
