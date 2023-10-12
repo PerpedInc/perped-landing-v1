@@ -106,7 +106,7 @@ export default function FaqHero() {
             </Heading>
           </Box>
           <Flex direction="column">
-            {qaSlotGenerated ? <>{qaArray} :</> : null}
+            {qaSlotGenerated ? <>{qaArray}</> : null}
           </Flex>
         </Flex>
         <Spacer />
