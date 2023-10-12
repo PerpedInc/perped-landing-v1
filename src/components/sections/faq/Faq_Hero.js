@@ -71,11 +71,26 @@ export default function FaqHero() {
 
   return (
     <>
-      <Flex direction="row" minH="800px" w="100%" mt={10}>
-        <Image src={right} w="15%" h="100%" />
+      <Flex
+        position="relative"
+        alignItems="flex-start"
+        direction="row"
+        w="100%"
+        mt={10}
+      >
+        <Image
+          src={right}
+          w="15%"
+          position="absolute"
+          top="0"
+          left="0"
+          height="100%"
+          objectFit="cover"
+        />
         <Spacer />
-        <Flex direction="column" w="65%">
+        <Flex direction="column" w="65%" fontFamily="Source Code Pro Thick">
           <Box
+            fontFamily="Source Code Pro Thick"
             borderBottom="1px solid #6E67B6"
             w="100%"
             align="center"
@@ -83,8 +98,8 @@ export default function FaqHero() {
           >
             <Heading
               fontSize="50px"
+              fontFamily="Source Code Pro Thick"
               color="white"
-              fontFamily="Source Code Pro"
               lineHeight="17px"
             >
               FAQs
@@ -95,7 +110,16 @@ export default function FaqHero() {
           </Flex>
         </Flex>
         <Spacer />
-        <Image src={left} w="15%" h="100%" />
+        <Image
+          src={left}
+          w="15%"
+          h="100%"
+          position="absolute"
+          top="0"
+          right="0"
+          height="100%"
+          objectFit="cover"
+        />
       </Flex>
     </>
   );

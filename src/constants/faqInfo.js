@@ -1,5 +1,5 @@
 export const faqQuestions = [
-  "What Is Perped?",
+  "What is Perped?",
   "What is an on-chain perpetual?",
   "What is futures trading?",
   "What are real world assets?",
