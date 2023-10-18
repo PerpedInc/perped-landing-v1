@@ -13,7 +13,7 @@ export const faqQuestions = [
   "What is MEV (Maximum Extractable Value)?",
   "Is Perped secure to use?",
   "Does Perped have a token? what is it used for?",
-  "What is a dao?",
+  "What is a DAO?",
   "What is the total token supply?",
   "How can I contact the Perped team?",
   "How can I join the Perped team?",
