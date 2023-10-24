@@ -43,15 +43,6 @@ export default function Icons() {
             _hover={{ fill: "url(#purple-cyan)" }}
           />
         </Link>
-        <Link href="#">
-          <Icon
-            as={FaLinkedin}
-            boxSize={7}
-            transition="1s"
-            fill="url(#purple-blue)"
-            _hover={{ fill: "url(#purple-cyan)" }}
-          />
-        </Link>
         <Link href="https://t.me/+cVUf9a8REyBhMWNk" target="_blank">
           <Icon
             as={FaTelegram}
