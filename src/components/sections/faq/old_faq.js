@@ -77,14 +77,15 @@ export default function FaqHero() {
         direction="row"
         w="100%"
         mt={10}
+        overflowY="hidden"
       >
         <Image
           src={right}
-          w="17.5%"
+          w="15%"
           position="absolute"
           top="0"
           left="0"
-          height="1700px"
+          height="3000px"
         />
         <Spacer />
         <Flex direction="column" w="65%" fontFamily="Source Code Pro Thick">
@@ -99,7 +100,7 @@ export default function FaqHero() {
               fontSize="50px"
               fontFamily="Source Code Pro Thick"
               color="white"
-              lineHeight="17px"
+              lineHeight="30px"
             >
               FAQs
             </Heading>
@@ -111,12 +112,12 @@ export default function FaqHero() {
         <Spacer />
         <Image
           src={left}
-          w="17.5%"
+          w="15%"
           h="100%"
           position="absolute"
           top="0"
           right="0"
-          height="1700px"
+          height="3000px"
         />
       </Flex>
     </>
