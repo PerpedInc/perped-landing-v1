@@ -50,6 +50,7 @@ const MenuElement = ({
         <>
           <Box key={index} display="block" fontSize={18}>
             <Button
+              fontSize={18}
               fontWeight={100}
               onClick={toggleFaq}
               backgroundColor={"transparent"}
