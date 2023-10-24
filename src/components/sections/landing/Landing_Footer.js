@@ -12,8 +12,11 @@ import Icons from "./Icons";
 
 import PERPED from "../../../images/PERPED.png";
 
+import { useFaq } from "../../../contexts/FaqContext";
+
 export default function LandingFooter() {
   const [isLargerThanMd] = useMediaQuery("(min-width: 1080px)");
+  const { toggleFaq } = useFaq();
 
   return (
     <>
@@ -52,8 +55,7 @@ export default function LandingFooter() {
                 <Heading size="sm" color="white" mb={1}>
                   About
                 </Heading>
-                <Link href="#">Blog</Link>
-                <Link href="#">FAQs</Link>
+                <Link onClick={toggleFaq}>FAQs</Link>
                 <Link href="https://perped.gitbook.io/" target="_blank">
                   Docs
                 </Link>
@@ -76,7 +78,6 @@ export default function LandingFooter() {
                   Twitter
                 </Link>
                 <Link href="#">Youtube</Link>
-                <Link href="#">LinkedIn</Link>
                 <Link href="https://t.me/+cVUf9a8REyBhMWNk" target="_blank">
                   Telegram
                 </Link>

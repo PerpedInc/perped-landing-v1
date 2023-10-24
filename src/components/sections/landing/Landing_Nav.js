@@ -50,6 +50,7 @@ const MenuElement = ({
         <>
           <Box key={index} display="block" fontSize={18}>
             <Button
+              fontWeight={100}
               onClick={toggleFaq}
               backgroundColor={"transparent"}
               p={0}
@@ -249,8 +250,8 @@ export default function LandingNav() {
                 <DrawerItem
                   toggleFunction={toggleAbout}
                   toggleState={showAbout}
-                  subLinksLocation={["#", "#", "https://perped.gitbook.io/"]}
-                  subLinksName={["Blogs", "FAQs", "Docs"]}
+                  subLinksLocation={["#", "https://perped.gitbook.io/"]}
+                  subLinksName={["FAQs", "Docs"]}
                 >
                   About
                 </DrawerItem>
@@ -269,14 +270,12 @@ export default function LandingNav() {
                     // "https://discord.gg/9Ac9DDEg6T",
                     "https://twitter.com/0xPerped",
                     "#",
-                    "#",
                     "https://t.me/+cVUf9a8REyBhMWNk",
                   ]}
                   subLinksName={[
                     // "Discord",
                     "Twitter",
                     "Youtube",
-                    "LinkedIn",
                     "Telegram",
                   ]}
                 >
@@ -296,8 +295,8 @@ export default function LandingNav() {
             <MenuElement
               toggleFunction={toggleAbout}
               toggleState={showAbout}
-              subLinksLocation={["#", "#", "https://perped.gitbook.io/"]}
-              subLinksName={["Blogs", "FAQs", "Docs"]}
+              subLinksLocation={["#", "https://perped.gitbook.io/"]}
+              subLinksName={["FAQs", "Docs"]}
             >
               About
             </MenuElement>
@@ -318,14 +317,12 @@ export default function LandingNav() {
                 // "https://discord.gg/9Ac9DDEg6T",
                 "https://twitter.com/0xPerped",
                 "#",
-                "#",
                 "https://t.me/+cVUf9a8REyBhMWNk",
               ]}
               subLinksName={[
                 // "Discord",
                 "Twitter",
                 "Youtube",
-                "LinkedIn",
                 "Telegram",
               ]}
             >

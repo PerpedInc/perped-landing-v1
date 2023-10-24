@@ -87,7 +87,12 @@ export default function FaqHero() {
           height="1700px"
         />
         <Spacer />
-        <Flex direction="column" w="65%" fontFamily="Source Code Pro Thick">
+        <Flex
+          direction="column"
+          w="65%"
+          fontFamily="Source Code Pro Thick"
+          minH={3100}
+        >
           <Box
             fontFamily="Source Code Pro Thick"
             borderBottom="1px solid #6E67B6"
