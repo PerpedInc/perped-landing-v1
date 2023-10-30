@@ -206,16 +206,16 @@ export default function LandingNav() {
     setShowAbout(!showAbout);
   };
 
-  const toggleCompany = () => {
-    setShowCompany(!showCompany);
-  };
+  // const toggleCompany = () => {
+  //   setShowCompany(!showCompany);
+  // };
 
   const toggleCommunity = () => {
     setShowCommunity(!showCommunity);
   };
 
   const [showAbout, setShowAbout] = useState(false);
-  const [showCompany, setShowCompany] = useState(false);
+  // const [showCompany, setShowCompany] = useState(false);
   const [showCommunity, setShowCommunity] = useState(false);
 
   const { isOpen, onOpen, onClose } = useDisclosure();
@@ -256,14 +256,14 @@ export default function LandingNav() {
                 >
                   About
                 </DrawerItem>
-                <DrawerItem
+                {/* <DrawerItem
                   toggleFunction={toggleCompany}
                   toggleState={showCompany}
                   subLinksLocation={["#", "#"]}
                   subLinksName={["Goal", "Brand"]}
                 >
                   Company
-                </DrawerItem>
+                </DrawerItem> */}
                 <DrawerItem
                   toggleFunction={toggleCommunity}
                   toggleState={showCommunity}
@@ -302,14 +302,14 @@ export default function LandingNav() {
               About
             </MenuElement>
 
-            <MenuElement
+            {/* <MenuElement
               toggleFunction={toggleCompany}
               toggleState={showCompany}
               subLinksLocation={["#", "#"]}
               subLinksName={["Goal", "Brand"]}
             >
               Company
-            </MenuElement>
+            </MenuElement> */}
 
             <MenuElement
               toggleFunction={toggleCommunity}
@@ -317,13 +317,11 @@ export default function LandingNav() {
               subLinksLocation={[
                 // "https://discord.gg/9Ac9DDEg6T",
                 "https://twitter.com/0xPerped",
-                "#",
                 "https://t.me/+cVUf9a8REyBhMWNk",
               ]}
               subLinksName={[
                 // "Discord",
                 "Twitter",
-                "Youtube",
                 "Telegram",
               ]}
             >

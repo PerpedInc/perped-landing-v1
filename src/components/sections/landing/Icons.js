@@ -1,5 +1,5 @@
 import { Flex, Link, Icon } from "@chakra-ui/react";
-import { FaTwitter, FaYoutube, FaTelegram } from "react-icons/fa";
+import { FaTwitter, FaTelegram } from "react-icons/fa";
 export default function Icons() {
   return (
     <>
@@ -34,7 +34,7 @@ export default function Icons() {
             _hover={{ fill: "url(#purple-cyan)" }}
           />
         </Link>
-        <Link href="#">
+        {/* <Link href="#">
           <Icon
             as={FaYoutube}
             boxSize={7}
@@ -42,7 +42,7 @@ export default function Icons() {
             fill="url(#purple-blue)"
             _hover={{ fill: "url(#purple-cyan)" }}
           />
-        </Link>
+        </Link> */}
         <Link href="https://t.me/+cVUf9a8REyBhMWNk" target="_blank">
           <Icon
             as={FaTelegram}

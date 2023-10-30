@@ -60,13 +60,13 @@ export default function LandingFooter() {
                   Docs
                 </Link>
               </Flex>
-              <Flex direction="column" gap={15}>
+              {/* <Flex direction="column" gap={15}>
                 <Heading size="sm" color="white" mb={1}>
                   Company
                 </Heading>
                 <Link href="#">Goal</Link>
                 <Link href="#">Brand</Link>
-              </Flex>
+              </Flex> */}
               <Flex direction="column" gap={15}>
                 <Heading size="sm" color="white" mb={1}>
                   Community
@@ -77,7 +77,7 @@ export default function LandingFooter() {
                 <Link href="https://twitter.com/0xPerped" target="_blank">
                   Twitter
                 </Link>
-                <Link href="#">Youtube</Link>
+                {/* <Link href="#">Youtube</Link> */}
                 <Link href="https://t.me/+cVUf9a8REyBhMWNk" target="_blank">
                   Telegram
                 </Link>
