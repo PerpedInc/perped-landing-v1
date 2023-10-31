@@ -50,6 +50,8 @@ const MenuElement = ({
         <>
           <Box key={index} display="block" fontSize={18}>
             <Button
+              fontSize={18}
+              fontWeight={100}
               onClick={toggleFaq}
               backgroundColor={"transparent"}
               p={0}
@@ -204,16 +206,16 @@ export default function LandingNav() {
     setShowAbout(!showAbout);
   };
 
-  const toggleCompany = () => {
-    setShowCompany(!showCompany);
-  };
+  // const toggleCompany = () => {
+  //   setShowCompany(!showCompany);
+  // };
 
   const toggleCommunity = () => {
     setShowCommunity(!showCommunity);
   };
 
   const [showAbout, setShowAbout] = useState(false);
-  const [showCompany, setShowCompany] = useState(false);
+  // const [showCompany, setShowCompany] = useState(false);
   const [showCommunity, setShowCommunity] = useState(false);
 
   const { isOpen, onOpen, onClose } = useDisclosure();
@@ -249,19 +251,19 @@ export default function LandingNav() {
                 <DrawerItem
                   toggleFunction={toggleAbout}
                   toggleState={showAbout}
-                  subLinksLocation={["#", "#", "https://perped.gitbook.io/"]}
-                  subLinksName={["Blogs", "FAQs", "Docs"]}
+                  subLinksLocation={["#", "https://perped.gitbook.io/"]}
+                  subLinksName={["FAQs", "Docs"]}
                 >
                   About
                 </DrawerItem>
-                <DrawerItem
+                {/* <DrawerItem
                   toggleFunction={toggleCompany}
                   toggleState={showCompany}
                   subLinksLocation={["#", "#"]}
                   subLinksName={["Goal", "Brand"]}
                 >
                   Company
-                </DrawerItem>
+                </DrawerItem> */}
                 <DrawerItem
                   toggleFunction={toggleCommunity}
                   toggleState={showCommunity}
@@ -269,14 +271,12 @@ export default function LandingNav() {
                     // "https://discord.gg/9Ac9DDEg6T",
                     "https://twitter.com/0xPerped",
                     "#",
-                    "#",
                     "https://t.me/+cVUf9a8REyBhMWNk",
                   ]}
                   subLinksName={[
                     // "Discord",
                     "Twitter",
                     "Youtube",
-                    "LinkedIn",
                     "Telegram",
                   ]}
                 >
@@ -296,20 +296,20 @@ export default function LandingNav() {
             <MenuElement
               toggleFunction={toggleAbout}
               toggleState={showAbout}
-              subLinksLocation={["#", "#", "https://perped.gitbook.io/"]}
-              subLinksName={["Blogs", "FAQs", "Docs"]}
+              subLinksLocation={["#", "https://perped.gitbook.io/"]}
+              subLinksName={["FAQs", "Docs"]}
             >
               About
             </MenuElement>
 
-            <MenuElement
+            {/* <MenuElement
               toggleFunction={toggleCompany}
               toggleState={showCompany}
               subLinksLocation={["#", "#"]}
               subLinksName={["Goal", "Brand"]}
             >
               Company
-            </MenuElement>
+            </MenuElement> */}
 
             <MenuElement
               toggleFunction={toggleCommunity}
@@ -317,15 +317,11 @@ export default function LandingNav() {
               subLinksLocation={[
                 // "https://discord.gg/9Ac9DDEg6T",
                 "https://twitter.com/0xPerped",
-                "#",
-                "#",
                 "https://t.me/+cVUf9a8REyBhMWNk",
               ]}
               subLinksName={[
                 // "Discord",
                 "Twitter",
-                "Youtube",
-                "LinkedIn",
                 "Telegram",
               ]}
             >
